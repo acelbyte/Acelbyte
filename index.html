@@ -376,9 +376,9 @@
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #FFF700 100%);
             --dark-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
-            --glow-color: #00f2fe;
+            --glow-color: #FFF700;
         }
 
         * {
@@ -423,8 +423,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(0, 242, 254, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 242, 254, 0.1) 1px, transparent 1px);
+                linear-gradient(rgba(255, 247, 0, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 247, 0, 0.1) 1px, transparent 1px);
             background-size: 50px 50px;
             animation: gridMove 20s linear infinite;
         }
@@ -440,7 +440,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%2300f2fe" opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="0.5" fill="%23667eea" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/></circle><circle cx="60" cy="70" r="1.5" fill="%2300f2fe" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/></circle></svg>') repeat;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23FFF700" opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="0.5" fill="%23667eea" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/></circle><circle cx="60" cy="70" r="1.5" fill="%23FFF700" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/></circle></svg>') repeat;
             animation: particleFloat 15s linear infinite;
         }
 
@@ -456,7 +456,7 @@
             max-height: 80%;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 0 50px rgba(0, 242, 254, 0.3);
+            box-shadow: 0 0 50px rgba(255, 247, 0, 0.3);
         }
 
         .video-container video {
@@ -479,7 +479,7 @@
 
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #00f2fe, #667eea);
+            background: linear-gradient(90deg, #FFF700, #667eea);
             width: 0%;
             border-radius: 2px;
             transition: width 0.1s ease;
@@ -500,6 +500,20 @@
             font-family: 'Product Sans', sans-serif;
             padding: 0;
             margin: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23FFF700" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -1;
         }
 
         /* Page padding for content */
@@ -655,8 +669,8 @@
         .custom-navbar {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(15, 15, 35, 0.9));
             backdrop-filter: blur(25px) saturate(180%);
-            border-bottom: 2px solid rgba(0, 242, 254, 0.6);
-            box-shadow: 0 8px 32px rgba(0, 242, 254, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border-bottom: 2px solid rgba(255, 247, 0, 0.6);
+            box-shadow: 0 8px 32px rgba(255, 247, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             padding: 1rem 0;
             position: sticky;
@@ -684,7 +698,7 @@
 
         .nav-logo:hover {
             transform: scale(1.05);
-            filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.7));
+            filter: drop-shadow(0 0 15px rgba(255, 247, 0, 0.7));
         }
 
         .hamburger-btn {
@@ -700,8 +714,8 @@
         }
 
         .hamburger-btn:hover {
-            background: rgba(0, 242, 254, 0.1);
-            box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+            background: rgba(255, 247, 0, 0.1);
+            box-shadow: 0 0 10px rgba(255, 247, 0, 0.3);
         }
 
         .hamburger-line {
@@ -740,14 +754,14 @@
 
         /* XESC and SARAH logo styling */
         img[src="images/logo2.png"], img[src="images/logo3.png"] {
-            filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.4)) brightness(1.2) contrast(1.1);
+            filter: drop-shadow(0 0 8px rgba(255, 247, 0, 0.4)) brightness(1.2) contrast(1.1);
             transition: all 0.3s ease;
             background: transparent !important;
             border-radius: 4px;
         }
 
         img[src="images/logo2.png"]:hover, img[src="images/logo3.png"]:hover {
-            filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.7)) brightness(1.4) contrast(1.3);
+            filter: drop-shadow(0 0 15px rgba(255, 247, 0, 0.7)) brightness(1.4) contrast(1.3);
             transform: scale(1.1);
         }
 
@@ -792,21 +806,21 @@
 
         .nav-link:hover {
             color: #ffffff;
-            background: rgba(0, 242, 254, 0.1);
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+            background: rgba(255, 247, 0, 0.1);
+            box-shadow: 0 0 20px rgba(255, 247, 0, 0.3);
             transform: translateY(-2px);
             text-decoration: none;
         }
 
         .nav-link.active {
-            color: #00f2fe;
-            background: rgba(0, 242, 254, 0.15);
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+            color: #FFF700;
+            background: rgba(255, 247, 0, 0.15);
+            box-shadow: 0 0 25px rgba(255, 247, 0, 0.4);
             text-decoration: none;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #00f2fe, #4facfe) !important;
+            background: linear-gradient(135deg, #FFF700, #4facfe) !important;
             border: none !important;
             font-family: 'Product Sans', sans-serif !important;
             font-weight: 600;
@@ -814,14 +828,14 @@
             letter-spacing: 1px;
             padding: 0.75rem 2rem !important;
             border-radius: 30px !important;
-            box-shadow: 0 8px 25px rgba(0, 242, 254, 0.3) !important;
+            box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3) !important;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px) !important;
-            box-shadow: 0 15px 35px rgba(0, 242, 254, 0.5) !important;
-            background: linear-gradient(135deg, #4facfe, #00f2fe) !important;
+            box-shadow: 0 15px 35px rgba(255, 247, 0, 0.5) !important;
+            background: linear-gradient(135deg, #4facfe, #FFF700) !important;
         }
 
         /* Enhanced buttons */
@@ -863,7 +877,7 @@
 
         .card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 242, 254, 0.2);
+            box-shadow: 0 20px 40px rgba(255, 247, 0, 0.2);
         }
 
         /* Floating elements */
@@ -888,18 +902,11 @@
             background: var(--dark-gradient);
             position: relative;
             overflow: hidden;
+            border-radius: 0 0 20px 20px;
+            border: 1px solid rgba(255, 247, 0, 0.3);
         }
 
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%2300f2fe" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            animation: float 20s ease-in-out infinite;
-        }
+
 
         /* Glowing text */
         .glow-text {
@@ -960,7 +967,7 @@
                 height: calc(100vh - 80px);
                 background: rgba(0, 0, 0, 0.95);
                 backdrop-filter: blur(10px);
-                border-top: 1px solid rgba(0, 242, 254, 0.2);
+                border-top: 1px solid rgba(255, 247, 0, 0.2);
                 transition: left 0.3s ease;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -1045,7 +1052,7 @@
         /* Futuristic Footer Styling */
         .futuristic-footer {
             background: var(--dark-gradient) !important;
-            border-top: 2px solid rgba(0, 242, 254, 0.4);
+            border-top: 2px solid rgba(255, 247, 0, 0.4);
             position: relative;
             overflow: hidden;
             margin-top: 4rem;
@@ -1075,7 +1082,7 @@
             transform: translate(-50%, -50%);
             width: 300px;
             height: 100px;
-            background: radial-gradient(ellipse, rgba(0, 242, 254, 0.1) 0%, transparent 70%);
+            background: radial-gradient(ellipse, rgba(255, 247, 0, 0.1) 0%, transparent 70%);
             border-radius: 50%;
             animation: pulse 4s ease-in-out infinite;
         }
@@ -1098,7 +1105,7 @@
             font-size: 1.5rem;
             font-weight: 600;
             margin: 0;
-            text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+            text-shadow: 0 0 10px rgba(255, 247, 0, 0.3);
         }
         
         .footer-nav-item {
@@ -1113,7 +1120,7 @@
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            text-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+            text-shadow: 0 0 8px rgba(255, 247, 0, 0.3);
         }
         
         .footer-links {
@@ -1135,10 +1142,11 @@
         }
         
         .footer-link:hover {
-            color: rgba(0, 242, 254, 0.9);
-            text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
-            transform: translateX(3px);
+            color: #FFF700;
+            text-shadow: 0 0 8px rgba(255, 247, 0, 0.4);
+            transform: translateX(3px) scale(1.1);
             text-decoration: none;
+            filter: drop-shadow(0 0 15px rgba(255, 247, 0, 0.7)) brightness(1.4) contrast(1.3);
         }
         
         .footer-social {
@@ -1158,18 +1166,18 @@
             justify-content: center;
             width: 35px;
             height: 35px;
-            background: rgba(0, 242, 254, 0.1);
-            border: 1px solid rgba(0, 242, 254, 0.3);
+            background: rgba(255, 247, 0, 0.1);
+            border: 1px solid rgba(255, 247, 0, 0.3);
             border-radius: 8px;
             transition: all 0.3s ease;
             text-decoration: none;
         }
         
         .social-link:hover {
-            background: rgba(0, 242, 254, 0.2);
-            border-color: rgba(0, 242, 254, 0.6);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+            background: rgba(255, 247, 0, 0.2);
+            border-color: rgba(255, 247, 0, 0.6);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 247, 0, 0.3);
         }
         
         .social-link svg {
@@ -1184,8 +1192,8 @@
             display: flex;
             align-items: center;
             gap: 0.4rem;
-            background: rgba(0, 242, 254, 0.1);
-            border: 1px solid rgba(0, 242, 254, 0.3);
+            background: rgba(255, 247, 0, 0.1);
+            border: 1px solid rgba(255, 247, 0, 0.3);
             border-radius: 20px;
             padding: 0.5rem 1rem;
             color: rgba(255, 255, 255, 0.8);
@@ -1197,17 +1205,17 @@
         }
         
         .back-to-top:hover {
-            background: rgba(0, 242, 254, 0.2);
-            border-color: rgba(0, 242, 254, 0.6);
+            background: rgba(255, 247, 0, 0.2);
+            border-color: rgba(255, 247, 0, 0.6);
             color: rgba(255, 255, 255, 0.95);
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 247, 0, 0.3);
         }
         
         .footer-copyright {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.85rem;
-            text-shadow: 0 0 8px rgba(0, 242, 254, 0.2);
+            text-shadow: 0 0 8px rgba(255, 247, 0, 0.2);
             letter-spacing: 0.3px;
         }
 
@@ -1215,7 +1223,7 @@
             font-family: 'Product Sans', sans-serif;
             font-size: 1rem;
             color: rgba(255, 255, 255, 0.9);
-            text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+            text-shadow: 0 0 10px rgba(255, 247, 0, 0.3);
             position: relative;
             z-index: 3;
             letter-spacing: 0.5px;
@@ -1441,7 +1449,7 @@
                 <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
                     <div class="text-center slide-in-left">
 
-                        <h1 class="fw-bold glow-text" style="font-family: 'Product Sans', sans-serif; font-size: 3.5rem; color: white;">Welcome to Acelbyte Official Website</h1>
+                        <h1 class="fw-bold" style="font-family: 'Product Sans', sans-serif; font-size: 3.5rem; color: white;">Welcome to Acelbyte Official Website</h1>
                         <p class="lead text-light mt-3">This website is powered by <img src="images/logo2.png" alt="XESC" style="height: 24px; width: auto; vertical-align: middle; margin: 0 5px;"> XESC & <img src="images/logo3.png" alt="SARAH" style="height: 24px; width: auto; vertical-align: middle; margin: 0 5px;"> SARAH AI systems for next-level digital experiences.</p>
                         <div class="mt-4">
                             <button class="btn btn-primary btn-lg me-3" style="border-radius: 50px; padding: 15px 30px;">View Portfolio</button>
@@ -1472,7 +1480,7 @@
             <div class="py-5 p-lg-5">
                 <div class="row row-cols-1 row-cols-md-2 mx-auto">
                     <div class="col mb-5 scroll-animate">
-                        <div class="card glass-dark" style="border: 1px solid rgba(0, 242, 254, 0.3); position: relative; overflow: hidden;">
+                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden;">
                             <div class="card-body px-4 py-5 px-md-5">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
                                 <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">🤖 AI Development</h5>
@@ -1481,7 +1489,7 @@
                         </div>
                     </div>
                     <div class="col mb-5 scroll-animate">
-                        <div class="card glass-dark" style="border: 1px solid rgba(249, 147, 251, 0.3); position: relative; overflow: hidden;">
+                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden;">
                             <div class="card-body px-4 py-5 px-md-5">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--secondary-gradient); border-radius: 15px;"></div>
                                 <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Full-Stack Development</h5>
@@ -1490,7 +1498,7 @@
                         </div>
                     </div>
                     <div class="col mb-4 scroll-animate">
-                        <div class="card glass-dark" style="border: 1px solid rgba(102, 126, 234, 0.3); position: relative; overflow: hidden;">
+                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden;">
                             <div class="card-body px-4 py-5 px-md-5">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--primary-gradient); border-radius: 15px;"></div>
                                 <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Data Science</h5>
@@ -1499,7 +1507,7 @@
                         </div>
                     </div>
                     <div class="col mb-4 scroll-animate">
-                        <div class="card glass-dark" style="border: 1px solid rgba(79, 172, 254, 0.3); position: relative; overflow: hidden;">
+                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden;">
                             <div class="card-body px-4 py-5 px-md-5">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
                                 <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">DevOps & Cloud</h5>
@@ -1530,10 +1538,8 @@
                         <div class="footer-nav-item">
                             <h5 class="footer-nav-title">Projects</h5>
                             <div class="footer-links">
-                                <a href="#" class="footer-link">AI Development</a>
-                                <a href="#" class="footer-link">Web Development</a>
-                                <a href="#" class="footer-link">Data Science</a>
-                                <a href="#" class="footer-link">Cloud Solutions</a>
+                                <a href="#" class="footer-link">Visual Effects</a>
+                                <a href="#" class="footer-link">Photography</a>
                             </div>
                         </div>
                     </div>
@@ -1596,7 +1602,7 @@
                 </div>
                 
                 <!-- Copyright Section -->
-                <div class="row mt-4 pt-4" style="border-top: 1px solid rgba(0, 242, 254, 0.2);">
+                <div class="row mt-4 pt-4" style="border-top: 1px solid rgba(255, 247, 0, 0.2);">
                     <div class="col-12 text-center">
                         <p class="footer-copyright mb-0">
                             ©2025 Acelbyte. All rights reserved. Powered by 
@@ -1655,12 +1661,12 @@
                 window.addEventListener('scroll', () => {
                     if (window.scrollY > 100) {
                         navbar.style.background = 'linear-gradient(135deg, rgba(0, 0, 0, 0.98), rgba(15, 15, 35, 0.95))';
-                        navbar.style.borderBottom = '2px solid rgba(0, 242, 254, 0.8)';
-                        navbar.style.boxShadow = '0 12px 40px rgba(0, 242, 254, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15)';
+                        navbar.style.borderBottom = '2px solid rgba(255, 247, 0, 0.8)';
+                navbar.style.boxShadow = '0 12px 40px rgba(255, 247, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15)';
                     } else {
                         navbar.style.background = 'linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(15, 15, 35, 0.9))';
-                        navbar.style.borderBottom = '2px solid rgba(0, 242, 254, 0.6)';
-                        navbar.style.boxShadow = '0 8px 32px rgba(0, 242, 254, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
+                        navbar.style.borderBottom = '2px solid rgba(255, 247, 0, 0.6)';
+                navbar.style.boxShadow = '0 8px 32px rgba(255, 247, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
                     }
                 });
             }
@@ -1688,12 +1694,12 @@
             cards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-15px) scale(1.03)';
-                    this.style.boxShadow = '0 25px 50px rgba(0, 242, 254, 0.3)';
+                    this.style.boxShadow = '0 25px 50px rgba(255, 247, 0, 0.3)';
                 });
                 
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0) scale(1)';
-                    this.style.boxShadow = '0 20px 40px rgba(0, 242, 254, 0.2)';
+                    this.style.boxShadow = '0 20px 40px rgba(255, 247, 0, 0.2)';
                 });
             });
         }
@@ -1714,35 +1720,56 @@
             }, 100);
         });
 
-        // Add cursor trail effect
+        // Enhanced cursor trail effect with more particles
         let mouseTrail = [];
+        let lastMouseMove = 0;
         document.addEventListener('mousemove', function(e) {
-            mouseTrail.push({x: e.clientX, y: e.clientY, time: Date.now()});
+            const now = Date.now();
+            mouseTrail.push({x: e.clientX, y: e.clientY, time: now});
             
             // Remove old trail points
-            mouseTrail = mouseTrail.filter(point => Date.now() - point.time < 1000);
+            mouseTrail = mouseTrail.filter(point => now - point.time < 1000);
             
-            // Create trail effect (optional - can be enabled for more interactivity)
-            if (Math.random() < 0.1) {
-                const trail = document.createElement('div');
-                trail.style.position = 'fixed';
-                trail.style.left = e.clientX + 'px';
-                trail.style.top = e.clientY + 'px';
-                trail.style.width = '4px';
-                trail.style.height = '4px';
-                trail.style.background = 'var(--glow-color)';
-                trail.style.borderRadius = '50%';
-                trail.style.pointerEvents = 'none';
-                trail.style.zIndex = '9999';
-                trail.style.opacity = '0.6';
-                trail.style.transition = 'opacity 0.5s ease-out';
-                document.body.appendChild(trail);
-                
-                setTimeout(() => {
-                    trail.style.opacity = '0';
-                    setTimeout(() => trail.remove(), 500);
-                }, 100);
+            // Create more frequent trail particles when moving
+            const timeSinceLastMove = now - lastMouseMove;
+            const moveSpeed = timeSinceLastMove < 50 ? 'fast' : 'normal';
+            
+            // Increase particle frequency based on movement speed
+            const particleChance = moveSpeed === 'fast' ? 0.4 : 0.2;
+            
+            if (Math.random() < particleChance) {
+                // Create multiple particles for enhanced effect
+                for (let i = 0; i < (moveSpeed === 'fast' ? 3 : 1); i++) {
+                    const trail = document.createElement('div');
+                    const size = Math.random() * 3 + 2; // Random size between 2-5px
+                    const offsetX = (Math.random() - 0.5) * 20; // Random offset
+                    const offsetY = (Math.random() - 0.5) * 20;
+                    
+                    trail.style.position = 'fixed';
+                    trail.style.left = (e.clientX + offsetX) + 'px';
+                    trail.style.top = (e.clientY + offsetY) + 'px';
+                    trail.style.width = size + 'px';
+                    trail.style.height = size + 'px';
+                    trail.style.background = 'var(--glow-color)';
+                    trail.style.borderRadius = '50%';
+                    trail.style.pointerEvents = 'none';
+                    trail.style.zIndex = '9999';
+                    trail.style.opacity = Math.random() * 0.4 + 0.4; // Random opacity 0.4-0.8
+                    trail.style.transition = 'all 0.8s ease-out';
+                    trail.style.boxShadow = `0 0 ${size * 2}px var(--glow-color)`;
+                    document.body.appendChild(trail);
+                    
+                    // Animate particle movement
+                    setTimeout(() => {
+                        trail.style.transform = `translate(${(Math.random() - 0.5) * 40}px, ${(Math.random() - 0.5) * 40}px) scale(0)`;
+                        trail.style.opacity = '0';
+                    }, 50);
+                    
+                    setTimeout(() => trail.remove(), 850);
+                }
             }
+            
+            lastMouseMove = now;
         });
 
         // Video Intro Animation
