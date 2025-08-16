@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Projects</title>
+    <title>Contacts</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap">
@@ -777,6 +777,20 @@
             box-shadow: 0 20px 40px rgba(255, 247, 0, 0.2);
         }
 
+        /* Inline button hover effects */
+        button[style*="background: var(--glow-color)"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 10px 30px rgba(255, 247, 0, 0.4) !important;
+            filter: brightness(1.1) !important;
+        }
+
+        /* View Portfolio button hover effects */
+        button[style*="background: #FFF700"]:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 15px 35px rgba(255, 247, 0, 0.5) !important;
+            background: #FFD700 !important;
+        }
+
         /* Floating elements */
         .float-animation {
             animation: float 6s ease-in-out infinite;
@@ -848,6 +862,105 @@
         .btn {
             color: black !important;
             margin-bottom: 3rem !important;
+        }
+
+        /* Custom Dialog Styles */
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .dialog-box {
+            background: linear-gradient(135deg, rgba(15, 15, 15, 0.95), rgba(25, 25, 25, 0.9));
+            border: 2px solid rgba(255, 247, 0, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(255, 247, 0, 0.2);
+            animation: slideIn 0.4s ease-out;
+        }
+        
+        .dialog-title {
+            color: #FFF700;
+            font-family: 'Product Sans', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .dialog-message {
+            color: rgba(255, 255, 255, 0.9);
+            font-family: 'Product Sans', sans-serif;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .dialog-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .dialog-buttons .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-family: 'Product Sans', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            margin-bottom: 0 !important;
+        }
+        
+        .dialog-buttons .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFD700 !important;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dialog-buttons .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #FFD700 !important;
+        }
+        
+        .dialog-buttons .btn-primary {
+            background: #FFF700;
+            color: #000;
+        }
+        
+        .dialog-buttons .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px) scale(0.9);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
         /* Mobile Responsiveness */
@@ -1353,46 +1466,46 @@
         <div style="max-width: 1200px; margin: 0 auto; padding: 3rem 1rem; background: var(--dark-gradient); border-radius: 30px; margin-top: 50px;">
             <div style="display: flex; flex-wrap: wrap;">
                 <div style="flex: 1; max-width: 600px; text-align: center; margin: 0 auto;" class="fade-in-up">
-                    <p class="fw-bold mb-2" style="color: var(--glow-color); font-family: 'Product Sans', sans-serif;">Introduction</p>
-                    <h3 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Skills</h3>
+                    <p class="fw-bold mb-2" style="color: var(--glow-color); font-family: 'Product Sans', sans-serif;">Get in Touch</p>
+                    <h3 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Contacts</h3>
                     
                 </div>
             </div>
             <div style="padding: 3rem 1rem;">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 0 auto;">
-                    <div style="margin-bottom: 3rem;" class="scroll-animate">
-                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column;">
+                    <div style="margin-bottom: 3rem; grid-column: span 2;" class="scroll-animate visible">
+                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column; width: calc(100% - 40px); margin: 0 auto 20px auto;">
                             <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
-                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">🤖 AI Development</h5>
-                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Building intelligent systems with machine learning, neural networks, and advanced AI algorithms for next-generation applications.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button">Explore →</button>
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Email</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Reach out to me directly via email for business inquiries, collaborations, or any questions you might have.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="showEmailDialog()">Send Email →</button>
                             </div>
                         </div>
                     </div>
-                    <div style="margin-bottom: 3rem;" class="scroll-animate">
-                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column;">
+                    <div style="margin-bottom: 3rem; grid-column: span 2;" class="scroll-animate visible">
+                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column; width: calc(100% - 40px); margin: 0 auto 20px auto;">
                             <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--secondary-gradient); border-radius: 15px;"></div>
-                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Full-Stack Development</h5>
-                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Expert in modern web technologies, cloud architecture, and scalable application development from frontend to backend.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button">View Projects →</button>
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">WhatsApp</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Message me on WhatsApp for quick communication, project discussions, and instant updates.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="showWhatsAppDialog()">Message →</button>
                             </div>
                         </div>
                     </div>
-                    <div style="margin-bottom: 2rem;" class="scroll-animate">
-                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column;">
+                    <div style="margin-bottom: 2rem; grid-column: span 2;" class="scroll-animate visible">
+                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column; width: calc(100% - 40px); margin: 0 auto 20px auto;">
                             <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--primary-gradient); border-radius: 15px;"></div>
-                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Data Science</h5>
-                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Advanced analytics, predictive modeling, and data visualization to extract meaningful insights from complex datasets.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button">See Analytics →</button>
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Instagram</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Follow me on Instagram for behind-the-scenes content, creative projects, and personal updates.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="showInstagramDialog()">Follow →</button>
                             </div>
                         </div>
                     </div>
-                    <div style="margin-bottom: 2rem;" class="scroll-animate">
-                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column;">
+                    <div style="margin-bottom: 2rem; grid-column: span 2;" class="scroll-animate visible">
+                        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 15px; height: 100%; display: flex; flex-direction: column; width: calc(100% - 40px); margin: 0 auto 20px auto;">
                             <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
-                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">DevOps & Cloud</h5>
-                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Expertise in containerization, CI/CD pipelines, cloud infrastructure, and automated deployment strategies.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button">Learn More →</button>
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Calendly</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Book a meeting with me through Calendly to discuss collaborations, projects, or professional opportunities at your convenience.</p><button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="showCalendlyDialog()">Book Meeting →</button>
                             </div>
                         </div>
                     </div>
@@ -1402,12 +1515,12 @@
     </section>
 
     <footer class="futuristic-footer">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 1rem;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 30px 20px;">
             <div class="footer-content">
                 <div class="footer-glow"></div>
-                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; flex-wrap: wrap; gap: 30px;">
                     <!-- Logo Section -->
-                    <div style="flex: 1; min-width: 250px; margin-bottom: 1rem;">
+                    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
                         <div class="footer-brand">
                             <img src="images/logo1.png" alt="Acelbyte" class="footer-brand-logo">
                             <h4 class="footer-brand-text">Acelbyte</h4>
@@ -1415,7 +1528,7 @@
                     </div>
                     
                     <!-- Services Section -->
-                    <div style="flex: 1; min-width: 150px; margin-bottom: 1rem;">
+                    <div style="flex: 1; min-width: 150px; margin-bottom: 20px;">
                         <div class="footer-nav-item">
                             <h5 class="footer-nav-title">Projects</h5>
                             <div class="footer-links">
@@ -1426,7 +1539,7 @@
                     </div>
                     
                     <!-- Resources Section -->
-                    <div style="flex: 1; min-width: 150px; margin-bottom: 1rem;">
+                    <div style="flex: 1; min-width: 150px; margin-bottom: 20px;">
                         <div class="footer-nav-item">
                             <h5 class="footer-nav-title">Resources</h5>
                             <div class="footer-links">
@@ -1439,7 +1552,7 @@
                     </div>
                     
                     <!-- Company Section -->
-                    <div style="flex: 1; min-width: 150px; margin-bottom: 1rem;">
+                    <div style="flex: 1; min-width: 150px; margin-bottom: 20px;">
                         <div class="footer-nav-item">
                             <h5 class="footer-nav-title">Personal</h5>
                             <div class="footer-links">
@@ -1451,7 +1564,7 @@
                     </div>
                     
                     <!-- Social & Back to Top -->
-                    <div style="flex: 1; min-width: 250px; margin-bottom: 1rem;">
+                    <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
                         <div class="footer-social">
                             <h5 class="footer-nav-title">Connect</h5>
                             <div class="social-links mb-2">
@@ -1483,8 +1596,8 @@
                 </div>
                 
                 <!-- Copyright Section -->
-                <div style="display: flex; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 247, 0, 0.2);">
-                    <div style="flex: 1; text-align: center;">
+                <div style="margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(255, 247, 0, 0.2);">
+                    <div style="text-align: center;">
                         <p class="footer-copyright mb-0">
                             © 2020 - 2025 Acelbyte. All rights reserved. Powered by 
                             <img src="images/logo2.png" alt="XESC" class="footer-logo"> XESC and 
@@ -1495,7 +1608,51 @@
             </div>
         </div>
     </footer>
-
+    
+    <!-- Custom Dialogs -->
+    <div id="emailDialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <h3 class="dialog-title">Send Email</h3>
+            <p class="dialog-message">Would you like to open your email client to send me a message?</p>
+            <div class="dialog-buttons">
+                <button class="btn btn-secondary dialog-cancel" onclick="hideDialog('emailDialog')">Cancel</button>
+                <button class="btn btn-primary dialog-confirm" onclick="window.location.href='mailto:admin@acelbyte.com'; hideDialog('emailDialog')">Open Email</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="whatsappDialog" class="dialog-overlay">
+            <div class="dialog-box">
+                <h3 class="dialog-title">Message on WhatsApp</h3>
+                <p class="dialog-message">Would you like to start a WhatsApp conversation?</p>
+                <div class="dialog-buttons">
+                    <button class="btn btn-secondary dialog-cancel" onclick="hideDialog('whatsappDialog')">Cancel</button>
+                    <button class="btn btn-primary dialog-confirm" onclick="window.open('https://wa.me/628170737998', '_blank'); hideDialog('whatsappDialog')">Open WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    
+    <div id="instagramDialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <h3 class="dialog-title">Follow on Instagram</h3>
+            <p class="dialog-message">Would you like to visit my Instagram profile to follow?</p>
+            <div class="dialog-buttons">
+                <button class="btn btn-secondary dialog-cancel" onclick="hideDialog('instagramDialog')">Cancel</button>
+                <button class="btn btn-primary dialog-confirm" onclick="window.open('https://instagram.com/acelbyte', '_blank'); hideDialog('instagramDialog')">Visit Instagram</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="calendlyDialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <h3 class="dialog-title">Book Meeting on Calendly</h3>
+            <p class="dialog-message">Would you like to open Calendly to book a meeting at your convenience?</p>
+            <div class="dialog-buttons">
+                <button class="btn btn-secondary dialog-cancel" onclick="hideDialog('calendlyDialog')">Cancel</button>
+                <button class="btn btn-primary dialog-confirm" onclick="window.open('https://calendly.com/acelbyte', '_blank'); hideDialog('calendlyDialog')">Open Calendly</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Particle system
@@ -1682,6 +1839,44 @@
                     navMenu.classList.remove('active');
                 }
             });
+
+            // Remove active state from all nav links to ensure none appear selected
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+        });
+        
+        // Dialog functions
+        function showEmailDialog() {
+            const dialog = document.getElementById('emailDialog');
+            dialog.style.display = 'flex';
+        }
+        
+        function showWhatsAppDialog() {
+            const dialog = document.getElementById('whatsappDialog');
+            dialog.style.display = 'flex';
+        }
+        
+        function showInstagramDialog() {
+            const dialog = document.getElementById('instagramDialog');
+            dialog.style.display = 'flex';
+        }
+        
+        function showCalendlyDialog() {
+            const dialog = document.getElementById('calendlyDialog');
+            dialog.style.display = 'flex';
+        }
+        
+        function hideDialog(dialogId) {
+            const dialog = document.getElementById(dialogId);
+            dialog.style.display = 'none';
+        }
+        
+        // Close dialog when clicking outside
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('dialog-overlay')) {
+                event.target.style.display = 'none';
+            }
         });
     </script>
     </div> <!-- End Main Content -->

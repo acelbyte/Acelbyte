@@ -809,6 +809,38 @@
             box-shadow: 0 20px 40px rgba(255, 247, 0, 0.2);
         }
 
+        /* Inline button hover effects */
+        button[style*="background: var(--glow-color)"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 10px 30px rgba(255, 247, 0, 0.4) !important;
+            filter: brightness(1.1) !important;
+        }
+
+        /* View Portfolio button hover effects */
+        button[style*="background: #FFF700"]:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 15px 35px rgba(255, 247, 0, 0.5) !important;
+            background: #FFD700 !important;
+        }
+
+        /* Inline anchor hover effects */
+        a[style*="background: var(--glow-color)"] {
+            color: black !important;
+        }
+        
+        a[style*="background: var(--glow-color)"]:hover {
+            transform: translateY(-2px) scale(1.05) !important;
+            box-shadow: 0 10px 30px rgba(255, 247, 0, 0.4) !important;
+            filter: brightness(1.1) !important;
+        }
+
+        a[style*="border: 1px solid var(--glow-color)"]:hover {
+            background: var(--glow-color) !important;
+            color: black !important;
+            transform: translateY(-2px) scale(1.05) !important;
+            box-shadow: 0 10px 30px rgba(255, 247, 0, 0.3) !important;
+        }
+
         /* Floating elements */
         .float-animation {
             animation: float 6s ease-in-out infinite;
@@ -1397,7 +1429,7 @@
         </div>
     </header>
 
-    <section id="skills" style="animation: fadeInUp 0.8s ease-out;">
+    <section id="skills" class="scroll-animate" style="animation: fadeInUp 0.8s ease-out;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div style="background: var(--dark-gradient); border-radius: 30px; margin-top: 150px; margin-bottom: 60px; width: 100%; padding: 40px 25px; box-sizing: border-box;">
                     <!-- Header -->
@@ -1406,7 +1438,7 @@
                     </div>
 
                     <!-- Main Introduction -->
-                    <div style="width: calc(100% - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
+                    <div class="scroll-animate" style="width: calc(100% - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
                         <div style="padding: 40px 20px; position: relative;">
                             <p style="font-family: 'Product Sans', sans-serif; font-size: 1.1rem; line-height: 1.6; color: white; opacity: 0.8; margin: 0; padding: 0;"><strong style="color: var(--glow-color);">Acelbyte</strong> is a passionate creator exploring the worlds of <strong style="color: var(--glow-color);">technology, music, and software development</strong>. With a love for innovation, Acelbyte builds apps, tools, and creative projects that merge <strong style="color: var(--glow-color);">practical technology</strong> with artistic expression.<br><br>Known for crafting <strong style="color: var(--glow-color);">music player apps, AI systems, and cross-platform developer tools</strong>, Acelbyte blends technical skill with creativity. The name "<strong style="color: var(--glow-color);">Acelbyte</strong>" represents both identity and vision: <strong style="color: var(--glow-color);">Acel</strong> as a personal nickname, and <strong style="color: var(--glow-color);">Byte</strong> as a symbol of technology.<br><br>Beyond the technical side, Acel is curious, warm, and always looking for ways to create things that are <strong style="color: var(--glow-color);">unique, useful, and meaningful</strong>.</p>
                         </div>
@@ -1414,19 +1446,19 @@
 
                     <!-- Content Cards -->
                     <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; width: 100%;">
-                        <div style="width: calc(100% - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
+                        <div class="scroll-animate" style="width: calc(100% - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
                             <div style="padding: 40px 20px; position: relative;">
                                 <h5 style="font-family: 'Product Sans', sans-serif; font-weight: bold; color: white; margin-bottom: 15px;">Music Career</h5>
                                 <p style="color: white; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">Electronic music producer with signature track <strong style="color: var(--glow-color);">"Faith with Target"</strong> available on streaming platforms.</p>
                             </div>
                         </div>
-                        <div style="width: calc(100% - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
+                        <div class="scroll-animate" style="width: calc(100% - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
                              <div style="padding: 40px 20px; position: relative;">
                                  <h5 style="font-family: 'Product Sans', sans-serif; font-weight: bold; color: white; margin-bottom: 15px;">Social Media</h5>
                                  <p style="color: white; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">Active on YouTube, TikTok with <strong style="color: var(--glow-color);">3.6K followers</strong>, and Instagram with educational content.</p>
                              </div>
                          </div>
-                         <div style="width: calc(100% - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
+                         <div class="scroll-animate" style="width: calc(100% - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
                              <div style="padding: 40px 20px; position: relative;">
                                  <h5 style="font-family: 'Product Sans', sans-serif; font-weight: bold; color: white; margin-bottom: 15px;">Content Focus</h5>
                                  <p style="color: white; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">Family-friendly content focused on <strong style="color: var(--glow-color);">knowledge, happiness, and positivity</strong>.</p>

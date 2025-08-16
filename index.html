@@ -884,6 +884,20 @@
             box-shadow: 0 20px 40px rgba(255, 247, 0, 0.2);
         }
 
+        /* Inline button hover effects */
+        button[style*="background: var(--glow-color)"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 10px 30px rgba(255, 247, 0, 0.4) !important;
+            filter: brightness(1.1) !important;
+        }
+
+        /* View Portfolio button hover effects */
+        button[style*="background: #FFF700"]:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 15px 35px rgba(255, 247, 0, 0.5) !important;
+            background: #FFD700 !important;
+        }
+
         /* Floating elements */
         .float-animation {
             animation: float 6s ease-in-out infinite;
@@ -1473,7 +1487,7 @@
         </div>
     </header>
 
-    <section id="skills" style="margin: 0; padding: 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; background: var(--dark-gradient);">
+    <section id="skills" class="scroll-animate" style="margin: 0; padding: 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; background: var(--dark-gradient);">
         <div style="padding: 50px 0; width: 100%;">
             <div style="text-align: center; margin-bottom: 40px; padding: 0 20px;">
                 <div class="fade-in-up">
@@ -1483,7 +1497,7 @@
             </div>
             
             <!-- Photography Card -->
-               <div style="width: calc(100vw - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
+               <div class="scroll-animate card" style="width: calc(100vw - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
                  <div style="padding: 40px 20px; position: relative;">
                      <h5 style="font-family: 'Product Sans', sans-serif; font-weight: bold; color: white; margin-bottom: 15px;">Photography</h5>
                      <p style="color: white; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">Capturing moments and creating visual stories through professional photography, from portraits to landscapes and commercial work.</p>
@@ -1492,7 +1506,7 @@
              </div>
             
             <!-- Visual Effects Card -->
-               <div style="width: calc(100vw - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
+               <div class="scroll-animate card" style="width: calc(100vw - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
                  <div style="padding: 40px 20px; position: relative;">
                      <h5 style="font-family: 'Product Sans', sans-serif; font-weight: bold; color: white; margin-bottom: 15px;">Visual Effects</h5>
                      <p style="color: white; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">Creating stunning visual effects, motion graphics, and digital compositing for films, commercials, and multimedia projects.</p>
@@ -1501,7 +1515,7 @@
              </div>
             
             <!-- And Many More Card -->
-               <div style="width: calc(100vw - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
+               <div class="scroll-animate card" style="width: calc(100vw - 80px); margin: 0 40px 20px 40px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative;">
                  <div style="padding: 40px 20px; position: relative;">
                      <h5 style="font-family: 'Product Sans', sans-serif; font-weight: bold; color: white; margin-bottom: 15px;">And Many More</h5>
                      <p style="color: white; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">Exploring diverse creative fields and innovative solutions across multiple disciplines to bring your vision to life.</p>
