@@ -563,15 +563,15 @@ permalink: /skills
             margin: 0 !important;
         }
         
-        /* Hover animations for skill cards */
+        /* Hover animations for skill cards - DISABLED */
         .skill-card {
-            transition: all 0.3s ease;
-            cursor: pointer;
+            transition: none !important;
+            cursor: default !important;
         }
         
         .skill-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 0 25px 50px rgba(255, 247, 0, 0.3);
+            transform: none !important;
+            box-shadow: none !important;
         }
         
         /* Override Bootstrap padding classes for card-body to match parent width */
@@ -1535,8 +1535,152 @@ permalink: /skills
                         <div class="skill-card" style="width: calc(100% - 40px); margin: 0 40px 20px 0; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 15px; position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
                             <div style="padding: 2rem 1.5rem; flex: 1; display: flex; flex-direction: column;">
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--secondary-gradient); border-radius: 15px;"></div>
-                                <h5 style="font-family: 'Product Sans', sans-serif; font-weight: bold; color: white; margin-bottom: 15px;">Music Composer</h5>
-                                <p style="color: white; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">Electronic music producer with signature track <strong style="color: var(--glow-color);">"Faith with Target"</strong> available on streaming platforms.</p>
+                                <h5 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Music Composer</h5>
+                                <p class="text-light" style="opacity: 0.8; margin-bottom: 1.5rem;">Creating original musical compositions and soundtracks that enhance storytelling and evoke emotions across various media projects.</p>
+                                
+                                <!-- Custom Music Player Section -->
+                                <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 15px; border: 1px solid rgba(255, 247, 0, 0.2); margin-bottom: 1.5rem;">
+                                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
+                                        <span class="text-light" style="font-size: 0.9rem; font-family: 'Product Sans', sans-serif;">♪ Faith with Target</span>
+                                        <span style="font-size: 0.8rem; font-family: 'Product Sans', sans-serif; color: #FFD700 !important; margin-left: 0.5rem;">Preview</span>
+                                    </div>
+                                    
+                                    <!-- Hidden Audio Element -->
+                                    <audio id="custom-audio" preload="metadata">
+                                        <source src="songs/faith_with_target.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                    
+                                    <!-- Custom Player Controls -->
+                                     <div class="custom-player" style="background: rgba(0, 0, 0, 0.3); border-radius: 10px; padding: 10px; margin-top: 10px; display: flex; align-items: center; gap: 10px;">
+                                        <button id="play-pause-btn" style="background: #FFD700; border: none; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                            <span style="color: black; font-size: 14px;">▶</span>
+                                        </button>
+                                        <div style="flex: 1; background: rgba(255, 255, 255, 0.2); height: 4px; border-radius: 2px; position: relative; cursor: pointer;" id="progress-container" title="Click to seek or scroll to navigate">
+                                            <div id="progress-bar" style="background: #FFD700; height: 100%; border-radius: 2px; width: 0%; transition: width 0.1s;"></div>
+                                        </div>
+                                        <div id="time-display" style="color: #FFD700; font-size: 10px; font-family: 'Product Sans', sans-serif; min-width: 45px; text-align: center;">0:00 / 0:00</div>
+                                        <div style="display: flex; align-items: center; gap: 5px;">
+                                              <button id="mute-btn" style="background: none; border: none; color: #FFD700; font-size: 12px; cursor: pointer; padding: 2px;">🔊</button>
+                                              <div style="background: rgba(255, 255, 255, 0.2); width: 50px; height: 3px; border-radius: 2px; position: relative; cursor: pointer;" id="volume-container">
+                                                  <div id="volume-bar" style="background: #FFD700; height: 100%; border-radius: 2px; width: 70%; transition: width 0.2s;"></div>
+                                              </div>
+                                          </div>
+                                    </div>
+                                </div>
+                                
+                                <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                     const audio = document.getElementById('custom-audio');
+                                     const playPauseBtn = document.getElementById('play-pause-btn');
+                                     const progressContainer = document.getElementById('progress-container');
+                                     const progressBar = document.getElementById('progress-bar');
+                                     const volumeContainer = document.getElementById('volume-container');
+                                     const volumeBar = document.getElementById('volume-bar');
+                                     const muteBtn = document.getElementById('mute-btn');
+                                     const timeDisplay = document.getElementById('time-display');
+                                     
+                                     // Format time helper function
+                                     function formatTime(seconds) {
+                                         if (isNaN(seconds)) return '0:00';
+                                         const mins = Math.floor(seconds / 60);
+                                         const secs = Math.floor(seconds % 60);
+                                         return mins + ':' + (secs < 10 ? '0' : '') + secs;
+                                     }
+                                     
+                                     // Initialize time display with fallback
+                                     timeDisplay.textContent = '0:00 / 3:00';
+                                     
+                                     let isPlaying = false;
+                                     let isMuted = false;
+                                     let previousVolume = 0.7;
+                                    
+                                    // Play/Pause functionality
+                                    playPauseBtn.addEventListener('click', function() {
+                                        if (isPlaying) {
+                                            audio.pause();
+                                            playPauseBtn.innerHTML = '<span style="color: black; font-size: 14px;">▶</span>';
+                                            isPlaying = false;
+                                        } else {
+                                            audio.play().catch(function(error) {
+                                                console.log('Play failed:', error);
+                                            });
+                                            playPauseBtn.innerHTML = '<span style="color: black; font-size: 14px;">⏸</span>';
+                                            isPlaying = true;
+                                        }
+                                    });
+                                    
+                                    // Progress bar update
+                                    audio.addEventListener('timeupdate', function() {
+                                        if (audio.duration) {
+                                            const progress = (audio.currentTime / audio.duration) * 100;
+                                            progressBar.style.width = progress + '%';
+                                            timeDisplay.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+                                        }
+                                    });
+                                    
+                                    // Update time display when metadata loads
+                                     audio.addEventListener('loadedmetadata', function() {
+                                         timeDisplay.textContent = '0:00 / ' + formatTime(audio.duration);
+                                     });
+                                     
+                                     // Handle audio loading errors
+                                     audio.addEventListener('error', function(e) {
+                                         timeDisplay.textContent = 'Audio unavailable';
+                                     });
+                                    
+                                    // Progress bar click
+                                    progressContainer.addEventListener('click', function(e) {
+                                        const rect = progressContainer.getBoundingClientRect();
+                                        const clickX = e.clientX - rect.left;
+                                        const width = rect.width;
+                                        const clickRatio = Math.max(0, Math.min(1, clickX / width));
+                                        const newTime = clickRatio * (audio.duration || 180);
+                                        
+                                        if (audio.duration && !isNaN(audio.duration)) {
+                                            audio.currentTime = newTime;
+                                        }
+                                    });
+                                    
+                                    // Volume control
+                                    volumeContainer.addEventListener('click', function(e) {
+                                        const rect = volumeContainer.getBoundingClientRect();
+                                        const clickX = e.clientX - rect.left;
+                                        const width = rect.width;
+                                        const volume = clickX / width;
+                                        audio.volume = Math.max(0, Math.min(1, volume));
+                                        volumeBar.style.width = (volume * 100) + '%';
+                                    });
+                                    
+                                    // Reset when audio ends
+                                    audio.addEventListener('ended', function() {
+                                        playPauseBtn.innerHTML = '<span style="color: black; font-size: 14px;">▶</span>';
+                                        isPlaying = false;
+                                        progressBar.style.width = '0%';
+                                    });
+                                    
+                                    // Mute/Unmute functionality
+                                     muteBtn.addEventListener('click', function() {
+                                         if (isMuted) {
+                                             audio.volume = previousVolume;
+                                             volumeBar.style.width = (previousVolume * 100) + '%';
+                                             muteBtn.innerHTML = '🔊';
+                                             isMuted = false;
+                                         } else {
+                                             previousVolume = audio.volume;
+                                             audio.volume = 0;
+                                             volumeBar.style.width = '0%';
+                                             muteBtn.innerHTML = '🔇';
+                                             isMuted = true;
+                                         }
+                                     });
+                                     
+                                     // Set initial volume
+                                     audio.volume = 0.7;
+                                 });
+                                </script>
+                                
+                                <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto; margin-bottom: 1rem;" type="button" onclick="showMusicRedirectDialog()">Listen More →</button>
                                 <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.75rem 2rem; border-radius: 25px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-top: auto;" type="button" onclick="window.location.href='https://acelbyte.com/music-composer'">VIEW MUSIC →</button>
                             </div>
                         </div>
@@ -1718,18 +1862,25 @@ permalink: /skills
                 });
             });
             
-            // Add hover effects to skill cards
+            // Hover effects for skill cards - DISABLED
+            // const skillCards = document.querySelectorAll('.skill-card');
+            // skillCards.forEach(card => {
+            //     card.addEventListener('mouseenter', function() {
+            //         this.style.transform = 'translateY(-15px) scale(1.03)';
+            //         this.style.boxShadow = '0 25px 50px rgba(255, 247, 0, 0.3)';
+            //     });
+            //     
+            //     card.addEventListener('mouseleave', function() {
+            //         this.style.transform = 'translateY(0) scale(1)';
+            //         this.style.boxShadow = '0 20px 40px rgba(255, 247, 0, 0.2)';
+            //     });
+            // });
+            
+            // Ensure skill cards have no hover effects
             const skillCards = document.querySelectorAll('.skill-card');
             skillCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-15px) scale(1.03)';
-                    this.style.boxShadow = '0 25px 50px rgba(255, 247, 0, 0.3)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                    this.style.boxShadow = '0 20px 40px rgba(255, 247, 0, 0.2)';
-                });
+                card.style.transition = 'none';
+                card.style.cursor = 'default';
             });
         }
 
