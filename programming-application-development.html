@@ -1623,7 +1623,7 @@ permalink: /programming-application-development
                     if (!devtools.open) {
                         devtools.open = true;
                         // Replace page content when developer tools are detected
-                        document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #000; color: #fff; font-family: Arial, sans-serif; font-size: 24px;">Access Denied - Developer Tools Detected</div>';
+                        document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #000; color: #fff; font-family: Arial, sans-serif; font-size: 24px;">Developer tools detected. Please close them to continue using the website and restart the browser</div>';
                     }
                 } else {
                     devtools.open = false;
