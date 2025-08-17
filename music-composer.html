@@ -1,6 +1,5 @@
 ---
 permalink: /music-composer
-
 ---
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
@@ -650,14 +649,14 @@ permalink: /music-composer
         }
 
         /* XESC and SARAH logo styling */
-        img[src="images/logo2.png"], img[src="images/logo3.png"] {
+        img[src="images/logos/logo2.png"], img[src="images/logos/logo3.png"] {
             filter: drop-shadow(0 0 8px rgba(255, 247, 0, 0.4)) brightness(1.2) contrast(1.1);
             transition: all 0.3s ease;
             background: transparent !important;
             border-radius: 4px;
         }
 
-        img[src="images/logo2.png"]:hover, img[src="images/logo3.png"]:hover {
+        img[src="images/logos/logo2.png"]:hover, img[src="images/logos/logo3.png"]:hover {
             filter: drop-shadow(0 0 15px rgba(255, 247, 0, 0.7)) brightness(1.4) contrast(1.3);
             transform: scale(1.1);
         }
@@ -1323,7 +1322,7 @@ permalink: /music-composer
     <nav class="custom-navbar" id="mainNav">
         <div class="nav-container">
             <a href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="text-decoration: none;">
-                <img class="nav-logo" width="50" height="50" style="width: 50px;height: 50px;padding-right: 0px;margin-right: 0px;border-radius: 50%; object-fit: cover; background: transparent !important; cursor: pointer;" src="images/logo1.png">
+                <img class="nav-logo" width="50" height="50" style="width: 50px;height: 50px;padding-right: 0px;margin-right: 0px;border-radius: 50%; object-fit: cover; background: transparent !important; cursor: pointer;" src="images/logos/logo1.png">
             </a>
             <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
                 <span class="hamburger-line"></span>
@@ -1335,7 +1334,7 @@ permalink: /music-composer
                     <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="https://acelbyte.com/coming-soon">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/coming-soon">Projects</a></li>
                 </ul>
             </div>
         </div>
@@ -1347,73 +1346,358 @@ permalink: /music-composer
                 <div style="max-width: 600px; text-align: center; margin: 0 auto;">
                     <div class="text-center slide-in-left">
 
-                        <h1 class="fw-bold" style="font-family: 'Product Sans', sans-serif; font-size: 3.5rem; color: white;">My Projects</h1>
-                        <p class="text-light" style="font-family: 'Product Sans', sans-serif; font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">Explore my portfolio of innovative projects and creative solutions</p>
+                        <h1 class="fw-bold" style="font-family: 'Product Sans', sans-serif; font-size: 3.5rem; color: white;">Music Composer</h1>
+                        <p class="text-light" style="font-family: 'Product Sans', sans-serif; font-size: 1.2rem; opacity: 0.9; margin-top: 1rem;">Original compositions, soundtracks, and musical productions</p>
 
                         <div style="margin-top: 2rem;">
-                            <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 15px 30px; border-radius: 50px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-right: 1rem;" onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'})">View Portfolio</button>
+                            <button style="background: #FFF700; border: none; font-family: 'Product Sans', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 15px 30px; border-radius: 50px; box-shadow: 0 8px 25px rgba(255, 247, 0, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); color: black; cursor: pointer; margin-right: 1rem;" onclick="document.getElementById('music-showcase').scrollIntoView({behavior: 'smooth'})">Listen to Music</button>
 
                         </div>
                     </div>
                 </div>
                 <div style="max-width: 1000px; margin: 0 auto;">
                     <div class="position-relative slide-in-right" style="display: flex;flex-wrap: wrap;justify-content: flex-start;">
-                        <div style="position: relative;flex: 0 0 auto;transform: translate3d(-15%, 35%, 0);"><div class="glass-dark" style="width: 210px; height: 210px; border-radius: 25px; display: flex; align-items: center; justify-content: center; margin: 20px;"><img class="img-fluid" style="border-radius: 25px; filter: brightness(1.2) contrast(1.1); width: 210px; height: 210px; object-fit: cover;" data-bss-parallax="" data-bss-parallax-speed="0.8" src="images/image1.png"></div></div>
-                        <div style="position: relative;flex: 0 0 auto;transform: translate3d(-5%, 20%, 0);"><div class="glass-dark" style="width: 210px; height: 210px; border-radius: 25px; display: flex; align-items: center; justify-content: center; margin: 20px;"><img class="img-fluid" style="border-radius: 25px; filter: brightness(1.2) contrast(1.1); width: 210px; height: 210px; object-fit: cover;" data-bss-parallax="" data-bss-parallax-speed="0.4" src="images/image2.png"></div></div>
-                        <div style="position: relative;flex: 0 0 auto;transform: translate3d(0, 0%, 0);"><div class="glass-dark" style="width: 210px; height: 210px; border-radius: 25px; display: flex; align-items: center; justify-content: center; margin: 20px;"><img class="img-fluid" style="border-radius: 25px; filter: brightness(1.2) contrast(1.1); width: 210px; height: 210px; object-fit: cover;" data-bss-parallax="" data-bss-parallax-speed="0.25" src="images/image3.png"></div></div>
+                        <div style="position: relative;flex: 0 0 auto;transform: translate3d(-15%, 35%, 0);"><div class="glass-dark" style="width: 210px; height: 210px; border-radius: 25px; display: flex; align-items: center; justify-content: center; margin: 20px;"><img class="img-fluid" style="border-radius: 25px; filter: brightness(1.2) contrast(1.1); width: 210px; height: 210px; object-fit: cover;" data-bss-parallax="" data-bss-parallax-speed="0.8" src="images/titles/image1.png"></div></div>
+                        <div style="position: relative;flex: 0 0 auto;transform: translate3d(-5%, 20%, 0);"><div class="glass-dark" style="width: 210px; height: 210px; border-radius: 25px; display: flex; align-items: center; justify-content: center; margin: 20px;"><img class="img-fluid" style="border-radius: 25px; filter: brightness(1.2) contrast(1.1); width: 210px; height: 210px; object-fit: cover;" data-bss-parallax="" data-bss-parallax-speed="0.4" src="images/titles/image2.png"></div></div>
+                        <div style="position: relative;flex: 0 0 auto;transform: translate3d(0, 0%, 0);"><div class="glass-dark" style="width: 210px; height: 210px; border-radius: 25px; display: flex; align-items: center; justify-content: center; margin: 20px;"><img class="img-fluid" style="border-radius: 25px; filter: brightness(1.2) contrast(1.1); width: 210px; height: 210px; object-fit: cover;" data-bss-parallax="" data-bss-parallax-speed="0.25" src="images/titles/image3.png"></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="skills" class="scroll-animate">
+    <section id="music-showcase" class="scroll-animate">
         <div style="max-width: 1200px; margin: 0 auto; padding: 80px 20px; background: var(--dark-gradient); border-radius: 30px; margin-top: 50px;">
             <div style="display: flex; flex-wrap: wrap; gap: 30px;">
                 <div style="flex: 1; min-width: 300px; text-align: center; margin: 0 auto;">
-                    <p class="fw-bold mb-2" style="color: var(--glow-color); font-family: 'Product Sans', sans-serif;">Introduction</p>
-                    <h3 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Skills</h3>
-                    
+                    <p class="fw-bold mb-2" style="color: var(--glow-color); font-family: 'Product Sans', sans-serif;">Portfolio</p>
+                    <h3 class="fw-bold text-light" style="font-family: 'Product Sans', sans-serif;">Music Compositions</h3>
+                    <p class="text-light" style="font-family: 'Product Sans', sans-serif; opacity: 0.8; margin-top: 1rem;">Original soundtracks, compositions, and musical productions</p>
                 </div>
             </div>
             <div style="padding: 80px 40px;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+                    <!-- Featured Track: Faith with Target -->
                     <div style="margin-bottom: 40px;" class="scroll-animate">
-                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden;">
-                            <div style="padding: 40px 30px;">
-                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
-                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">🤖 AI Development</h5>
-                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Building intelligent systems with machine learning, neural networks, and advanced AI algorithms for next-generation applications.</p><button style="background: linear-gradient(135deg, #FFF700, #FFD700); color: black; border: none; border-radius: 25px; padding: 12px 24px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Explore →</button>
+                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 20px;">
+                            <div style="position: relative; width: 100%; height: 315px; background: url('images/others/image4.png') center/cover; border-radius: 20px 20px 0 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+
+                                <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(255, 247, 0, 0.9); color: black; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">Original Track</div>
+                            </div>
+                            <div style="padding: 30px;">
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Faith with Target</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.8;">An original composition that blends electronic elements with orchestral arrangements, creating a dynamic and emotionally driven soundtrack perfect for cinematic experiences and gaming environments.</p>
+                                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                                    <span style="background: rgba(255, 247, 0, 0.2); color: #FFF700; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem;">Original Composition</span>
+                                    <span style="background: rgba(255, 247, 0, 0.2); color: #FFF700; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem;">Electronic</span>
+                                    <span style="background: rgba(255, 247, 0, 0.2); color: #FFF700; padding: 4px 8px; border-radius: 12px; font-size: 0.8rem;">Orchestral</span>
+                                </div>
+                                
+                                <!-- Custom Music Player Section -->
+                                <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 15px; border: 1px solid rgba(255, 247, 0, 0.2); margin: 1.5rem 0;">
+                                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
+                                        <span class="text-light" style="font-size: 0.9rem; font-family: 'Product Sans', sans-serif;">♪ Faith with Target</span>
+                                        <span style="font-size: 0.8rem; font-family: 'Product Sans', sans-serif; color: #FFD700 !important; margin-left: 0.5rem;">Preview</span>
+                                    </div>
+                                    
+                                    <!-- Hidden Audio Element -->
+                                    <audio id="custom-audio" preload="metadata">
+                                        <source src="songs/faith_with_target.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                    
+                                    <!-- Custom Player Controls -->
+                                     <div class="custom-player" style="background: rgba(0, 0, 0, 0.3); border-radius: 10px; padding: 10px; margin-top: 10px; display: flex; align-items: center; gap: 10px;">
+                                        <button id="play-pause-btn" style="background: #FFD700; border: none; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                                            <span style="color: black; font-size: 14px;">▶</span>
+                                        </button>
+                                        <div style="flex: 1; background: rgba(255, 255, 255, 0.2); height: 4px; border-radius: 2px; position: relative; cursor: pointer;" id="progress-container" title="Click to seek or scroll to navigate">
+                                            <div id="progress-bar" style="background: #FFD700; height: 100%; border-radius: 2px; width: 0%; transition: width 0.1s;"></div>
+                                        </div>
+                                        <div id="time-display" style="color: #FFD700; font-size: 10px; font-family: 'Product Sans', sans-serif; min-width: 45px; text-align: center;">0:00 / 0:00</div>
+                                        <div style="display: flex; align-items: center; gap: 5px;">
+                                              <button id="mute-btn" style="background: none; border: none; color: #FFD700; font-size: 12px; cursor: pointer; padding: 2px;">🔊</button>
+                                              <div style="background: rgba(255, 255, 255, 0.2); width: 50px; height: 3px; border-radius: 2px; position: relative; cursor: pointer;" id="volume-container">
+                                                  <div id="volume-bar" style="background: #FFD700; height: 100%; border-radius: 2px; width: 70%; transition: width 0.2s;"></div>
+                                              </div>
+                                          </div>
+                                    </div>
+                                </div>
+                                
+                                <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                     const audio = document.getElementById('custom-audio');
+                                     const playPauseBtn = document.getElementById('play-pause-btn');
+                                     const progressContainer = document.getElementById('progress-container');
+                                     const progressBar = document.getElementById('progress-bar');
+                                     const volumeContainer = document.getElementById('volume-container');
+                                     const volumeBar = document.getElementById('volume-bar');
+                                     const muteBtn = document.getElementById('mute-btn');
+                                     const timeDisplay = document.getElementById('time-display');
+                                     
+                                     // Format time helper function
+                                     function formatTime(seconds) {
+                                         if (isNaN(seconds)) return '0:00';
+                                         const mins = Math.floor(seconds / 60);
+                                         const secs = Math.floor(seconds % 60);
+                                         return mins + ':' + (secs < 10 ? '0' : '') + secs;
+                                     }
+                                     
+                                     // Initialize time display with fallback
+                                     timeDisplay.textContent = '0:00 / 3:00';
+                                     
+                                     let isPlaying = false;
+                                     let isMuted = false;
+                                     let previousVolume = 0.7;
+                                    
+                                    // Debug function to log audio state
+                                    function logAudioState(context) {
+                                        console.log(`[${context}] Audio state:`, {
+                                            readyState: audio.readyState,
+                                            duration: audio.duration,
+                                            currentTime: audio.currentTime,
+                                            paused: audio.paused,
+                                            ended: audio.ended,
+                                            networkState: audio.networkState,
+                                            src: audio.src
+                                        });
+                                    }
+                                    
+                                    // Force load audio metadata on page load
+                                    audio.load();
+                                    logAudioState('Page Load');
+                                    
+                                    // Play/Pause functionality
+                                    playPauseBtn.addEventListener('click', function() {
+                                        if (isPlaying) {
+                                            audio.pause();
+                                            playPauseBtn.innerHTML = '<span style="color: black; font-size: 14px;">▶</span>';
+                                            isPlaying = false;
+                                        } else {
+                                            // Ensure audio is loaded before playing
+                                            if (audio.readyState < 2) {
+                                                audio.load();
+                                            }
+                                            audio.play().catch(function(error) {
+                                                console.log('Play failed:', error);
+                                            });
+                                            playPauseBtn.innerHTML = '<span style="color: black; font-size: 14px;">⏸</span>';
+                                            isPlaying = true;
+                                        }
+                                    });
+                                    
+                                    // Progress bar update
+                                    audio.addEventListener('timeupdate', function() {
+                                        console.log('Time update - Current:', audio.currentTime, 'Duration:', audio.duration, 'Ready state:', audio.readyState);
+                                        if (audio.duration) {
+                                            const progress = (audio.currentTime / audio.duration) * 100;
+                                            progressBar.style.width = progress + '%';
+                                            timeDisplay.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+                                        }
+                                    });
+                                    
+                                    // Update time display when metadata loads
+                                     audio.addEventListener('loadedmetadata', function() {
+                                         logAudioState('Metadata Loaded');
+                                         timeDisplay.textContent = '0:00 / ' + formatTime(audio.duration);
+                                     });
+                                     
+                                     // Handle audio loading errors
+                                     audio.addEventListener('error', function(e) {
+                                         logAudioState('Error');
+                                         console.log('Audio loading error details:', e);
+                                         timeDisplay.textContent = 'Audio unavailable';
+                                     });
+                                     
+                                     // Try to load audio metadata immediately
+                                      audio.addEventListener('canplay', function() {
+                                          logAudioState('Can Play');
+                                          if (audio.duration) {
+                                              timeDisplay.textContent = '0:00 / ' + formatTime(audio.duration);
+                                          }
+                                      });
+                                      
+                                      // Additional event listeners for debugging
+                                      audio.addEventListener('loadstart', () => logAudioState('Load Start'));
+                                      audio.addEventListener('loadeddata', () => logAudioState('Data Loaded'));
+                                      audio.addEventListener('canplaythrough', () => logAudioState('Can Play Through'));
+                                    
+                                    // Progress bar click
+                                    progressContainer.addEventListener('click', function(e) {
+                                        e.preventDefault();
+                                        
+                                        // Force load if not ready
+                                        if (audio.readyState < 1) {
+                                            audio.load();
+                                        }
+                                        
+                                        // Use mock duration if audio not loaded
+                                        const duration = audio.duration || 180; // 3 minutes fallback
+                                        
+                                        const rect = progressContainer.getBoundingClientRect();
+                                        const clickX = e.clientX - rect.left;
+                                        const width = rect.width;
+                                        const clickRatio = Math.max(0, Math.min(1, clickX / width));
+                                        const newTime = clickRatio * duration;
+                                        
+                                        console.log('Attempting to seek to:', newTime, 'Audio ready state:', audio.readyState, 'Duration:', audio.duration);
+                                        
+                                        if (audio.duration && !isNaN(audio.duration) && audio.readyState >= 1) {
+                                            try {
+                                                audio.currentTime = newTime;
+                                                console.log('Successfully set currentTime to:', newTime);
+                                            } catch (error) {
+                                                console.log('Error setting currentTime:', error);
+                                                mockCurrentTime = newTime;
+                                            }
+                                        } else {
+                                            // Update mock time for visual feedback
+                                            mockCurrentTime = newTime;
+                                            console.log('Using mock time:', newTime);
+                                        }
+                                        
+                                        // Update progress bar visually
+                                        const progressPercent = (newTime / duration) * 100;
+                                        progressBar.style.width = progressPercent + '%';
+                                        
+                                        // Update time display
+                                        timeDisplay.textContent = formatTime(newTime) + ' / ' + formatTime(duration);
+                                    });
+                                    
+                                    // Progress bar scroll seekbar functionality
+                                    let mockCurrentTime = 0; // For testing when audio fails to load
+                                    progressContainer.addEventListener('wheel', function(e) {
+                                        e.preventDefault();
+                                        
+                                        // Force load if not ready
+                                        if (audio.readyState < 1) {
+                                            audio.load();
+                                        }
+                                        
+                                        // Use mock duration if audio not loaded (for testing)
+                                        const duration = audio.duration || 180; // 3 minutes fallback
+                                        const currentTime = audio.currentTime || mockCurrentTime;
+                                        
+                                        const scrollSensitivity = 2; // seconds per scroll
+                                        const deltaTime = e.deltaY > 0 ? -scrollSensitivity : scrollSensitivity;
+                                        const newTime = Math.max(0, Math.min(duration, currentTime + deltaTime));
+                                        
+                                        console.log('Scroll seeking from', currentTime, 'to', newTime, 'Ready state:', audio.readyState);
+                                        
+                                        if (audio.duration && !isNaN(audio.duration) && audio.readyState >= 1) {
+                                            try {
+                                                audio.currentTime = newTime;
+                                                console.log('Successfully scrolled to:', newTime);
+                                            } catch (error) {
+                                                console.log('Error during scroll seek:', error);
+                                                mockCurrentTime = newTime;
+                                            }
+                                        } else {
+                                            // Update mock time for visual feedback
+                                            mockCurrentTime = newTime;
+                                            console.log('Using mock scroll time:', newTime);
+                                        }
+                                        
+                                        // Update progress bar visually
+                                        const progressPercent = (newTime / duration) * 100;
+                                        progressBar.style.width = progressPercent + '%';
+                                        
+                                        // Update time display
+                                        timeDisplay.textContent = formatTime(newTime) + ' / ' + formatTime(duration);
+                                    });
+                                    
+                                    // Add visual feedback for scroll interaction
+                                    progressContainer.addEventListener('mouseenter', function() {
+                                        progressContainer.style.transform = 'scaleY(1.5)';
+                                        progressContainer.style.transition = 'transform 0.2s ease';
+                                    });
+                                    
+                                    progressContainer.addEventListener('mouseleave', function() {
+                                        progressContainer.style.transform = 'scaleY(1)';
+                                    });
+                                    
+                                    // Volume control
+                                    volumeContainer.addEventListener('click', function(e) {
+                                        const rect = volumeContainer.getBoundingClientRect();
+                                        const clickX = e.clientX - rect.left;
+                                        const width = rect.width;
+                                        const volume = clickX / width;
+                                        audio.volume = Math.max(0, Math.min(1, volume));
+                                        volumeBar.style.width = (volume * 100) + '%';
+                                    });
+                                    
+                                    // Reset when audio ends
+                                    audio.addEventListener('ended', function() {
+                                        playPauseBtn.innerHTML = '<span style="color: black; font-size: 14px;">▶</span>';
+                                        isPlaying = false;
+                                        progressBar.style.width = '0%';
+                                    });
+                                    
+                                    // Mute/Unmute functionality
+                                     muteBtn.addEventListener('click', function() {
+                                         if (isMuted) {
+                                             audio.volume = previousVolume;
+                                             volumeBar.style.width = (previousVolume * 100) + '%';
+                                             muteBtn.innerHTML = '🔊';
+                                             isMuted = false;
+                                         } else {
+                                             previousVolume = audio.volume;
+                                             audio.volume = 0;
+                                             volumeBar.style.width = '0%';
+                                             muteBtn.innerHTML = '🔇';
+                                             isMuted = true;
+                                         }
+                                     });
+                                     
+                                     // Set initial volume
+                                     audio.volume = 0.7;
+                                 });
+                                </script>
+                                
+                                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+                                    <button style="background: #1DB954; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onclick="window.open('https://api.ffm.to/sl/e/c/pd8e7rq?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzUuMC4wLjAgU2FmYXJpLzUzNy4zNiBPUFIvMTIwLjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiT3BlcmEiLCJ2ZXJzaW9uIjoiMTIwLjAuMC4wIiwibWFqb3IiOiIxMjAifSwiY3B1Ijp7ImFyY2hpdGVjdHVyZSI6ImFtZDY0In0sImRldmljZSI6e30sImVuZ2luZSI6eyJuYW1lIjoiQmxpbmsiLCJ2ZXJzaW9uIjoiMTM1LjAuMC4wIn0sIm9zIjp7Im5hbWUiOiJXaW5kb3dzIiwidmVyc2lvbiI6IjEwIn19LCJjbGllbnQiOnsicmlkIjoiODJjNzM5YzEtN2FlYy00ZTI0LThkMjgtYWZkOGMwMzJjZmUwIiwic2lkIjoiMjAzZTc4ZGEtZTM1NC00MmVlLTg2YzAtOWZlMDExNDVkMDc4IiwiaXAiOiIxMjUuMTYwLjIzNy4zMiIsInJlZiI6Imh0dHBzOi8vd3d3LnNvdW5kb24uZ2xvYmFsLyIsImhvc3QiOiJzbmRvLmZmbS50byIsImxhbmciOiJlbiIsImlwQ291bnRyeSI6IklEIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IklEIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiJjYmJhODliMS0yYmMwLTRkYmEtYWIxMi0xZWViZTczZGJhMDYiLCJpZCI6IjY1MzEwMDc0MmQwMDAwMGMwMDEwMTE4YSIsInBydiI6dHJ1ZSwiaXNQcmVSIjpmYWxzZSwidHpvIjpudWxsLCJjaCI6bnVsbCwiYW4iOm51bGwsImRlc3RVcmwiOiJodHRwczovL29wZW4uc3BvdGlmeS5jb20vYWxidW0vN3FPTG4zS1Jsd0dmdWxjdGdBRVkwMCIsInNydmMiOiJzcG90aWZ5IiwicHJvZHVjdCI6InNtYXJ0bGluayIsInNob3J0SWQiOiJwZDhlN3JxIiwiaXNBdXRob3JpemF0aW9uUmVxdWlyZWQiOmZhbHNlLCJvd25lciI6IjYyNThmZTE4MjcwMDAwMGEwMDY4MzM3MiIsInRlbmFudCI6IjYyNThmYzhkNzhmNGYwNDhkNjA1ZWE0MSIsImFyIjoiNjUzMTAwNzIyOTAwMDBjZDU3ZjU1YzIwIiwiaXNTaG9ydExpbmsiOmZhbHNlLCJuYXRpdmUiOmZhbHNlfQ', '_blank')">Spotify</button>
+                                    <button style="background: #FA243C; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onclick="window.open('https://api.ffm.to/sl/e/c/pd8e7rq?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzUuMC4wLjAgU2FmYXJpLzUzNy4zNiBPUFIvMTIwLjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiT3BlcmEiLCJ2ZXJzaW9uIjoiMTIwLjAuMC4wIiwibWFqb3IiOiIxMjAifSwiY3B1Ijp7ImFyY2hpdGVjdHVyZSI6ImFtZDY0In0sImRldmljZSI6e30sImVuZ2luZSI6eyJuYW1lIjoiQmxpbmsiLCJ2ZXJzaW9uIjoiMTM1LjAuMC4wIn0sIm9zIjp7Im5hbWUiOiJXaW5kb3dzIiwidmVyc2lvbiI6IjEwIn19LCJjbGllbnQiOnsicmlkIjoiODJjNzM5YzEtN2FlYy00ZTI0LThkMjgtYWZkOGMwMzJjZmUwIiwic2lkIjoiMjAzZTc4ZGEtZTM1NC00MmVlLTg2YzAtOWZlMDExNDVkMDc4IiwiaXAiOiIxMjUuMTYwLjIzNy4zMiIsInJlZiI6Imh0dHBzOi8vd3d3LnNvdW5kb24uZ2xvYmFsLyIsImhvc3QiOiJzbmRvLmZmbS50byIsImxhbmciOiJlbiIsImlwQ291bnRyeSI6IklEIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IklEIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiJjYmJhODliMS0yYmMwLTRkYmEtYWIxMi0xZWViZTczZGJhMDYiLCJpZCI6IjY1MzEwMDc0MmQwMDAwMGMwMDEwMTE4YSIsInBydiI6dHJ1ZSwiaXNQcmVSIjpmYWxzZSwidHpvIjpudWxsLCJjaCI6bnVsbCwiYW4iOm51bGwsImRlc3RVcmwiOiJodHRwczovL2dlby5tdXNpYy5hcHBsZS5jb20vaWQvYWxidW0vZmFpdGgtd2l0aC10YXJnZXQtc2luZ2xlLzE3MzA0OTExMzM_YXBwPW11c2ljJmxzPTEmY3Q9RkZNXzE2ZGJhZWVmN2M0MjIxM2ZkNzE1NjdiNjJkZWE1MjE1JmF0PTEwMDFsd1F5Iiwic3J2YyI6ImFwcGxlIiwicHJvZHVjdCI6InNtYXJ0bGluayIsInNob3J0SWQiOiJwZDhlN3JxIiwiaXNBdXRob3JpemF0aW9uUmVxdWlyZWQiOmZhbHNlLCJvd25lciI6IjYyNThmZTE4MjcwMDAwMGEwMDY4MzM3MiIsInRlbmFudCI6IjYyNThmYzhkNzhmNGYwNDhkNjA1ZWE0MSIsImFyIjoiNjUzMTAwNzIyOTAwMDBjZDU3ZjU1YzIwIiwiaXNTaG9ydExpbmsiOmZhbHNlLCJuYXRpdmUiOmZhbHNlfQ', '_blank')">Apple Music</button>
+                                    <button style="background: #FF0000; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onclick="window.open('https://api.ffm.to/sl/e/c/pd8e7rq?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzUuMC4wLjAgU2FmYXJpLzUzNy4zNiBPUFIvMTIwLjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiT3BlcmEiLCJ2ZXJzaW9uIjoiMTIwLjAuMC4wIiwibWFqb3IiOiIxMjAifSwiY3B1Ijp7ImFyY2hpdGVjdHVyZSI6ImFtZDY0In0sImRldmljZSI6e30sImVuZ2luZSI6eyJuYW1lIjoiQmxpbmsiLCJ2ZXJzaW9uIjoiMTM1LjAuMC4wIn0sIm9zIjp7Im5hbWUiOiJXaW5kb3dzIiwidmVyc2lvbiI6IjEwIn19LCJjbGllbnQiOnsicmlkIjoiODJjNzM5YzEtN2FlYy00ZTI0LThkMjgtYWZkOGMwMzJjZmUwIiwic2lkIjoiMjAzZTc4ZGEtZTM1NC00MmVlLTg2YzAtOWZlMDExNDVkMDc4IiwiaXAiOiIxMjUuMTYwLjIzNy4zMiIsInJlZiI6Imh0dHBzOi8vd3d3LnNvdW5kb24uZ2xvYmFsLyIsImhvc3QiOiJzbmRvLmZmbS50byIsImxhbmciOiJlbiIsImlwQ291bnRyeSI6IklEIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IklEIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiJjYmJhODliMS0yYmMwLTRkYmEtYWIxMi0xZWViZTczZGJhMDYiLCJpZCI6IjY1MzEwMDc0MmQwMDAwMGMwMDEwMTE4YSIsInBydiI6dHJ1ZSwiaXNQcmVSIjpmYWxzZSwidHpvIjpudWxsLCJjaCI6bnVsbCwiYW4iOm51bGwsImRlc3RVcmwiOiJodHRwczovL3d3dy55b3V0dWJlLmNvbS9wbGF5bGlzdD9saXN0PU9MQUs1dXlfbnBSSVkwZm1DRF9xUTEtYjFxN3VmOS1aXzM5Tm5qa3hjJnNyYz1GRk0mbGlkPTAwMDAwMDAwLTY1MzEtMDA3NC0yZDAwLTAwMGMwMDEwMTE4YSZjaWQ9ZWVmMjY3ZjYtM2Y1MS01ZDQ2LWE3MTctNzExYWMxMmJjZjc2Iiwic3J2YyI6InlvdXR1YmUiLCJwcm9kdWN0Ijoic21hcnRsaW5rIiwic2hvcnRJZCI6InBkOGU3cnEiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6ZmFsc2UsIm93bmVyIjoiNjI1OGZlMTgyNzAwMDAwYTAwNjgzMzcyIiwidGVuYW50IjoiNjI1OGZjOGQ3OGY0ZjA0OGQ2MDVlYTQxIiwiYXIiOiI2NTMxMDA3MjI5MDAwMGNkNTdmNTVjMjAiLCJpc1Nob3J0TGluayI6ZmFsc2UsIm5hdGl2ZSI6ZmFsc2V9', '_blank')">YouTube</button>
+                                    <button style="background: #FF9900; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onclick="window.open('https://api.ffm.to/sl/e/c/pd8e7rq?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzUuMC4wLjAgU2FmYXJpLzUzNy4zNiBPUFIvMTIwLjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiT3BlcmEiLCJ2ZXJzaW9uIjoiMTIwLjAuMC4wIiwibWFqb3IiOiIxMjAifSwiY3B1Ijp7ImFyY2hpdGVjdHVyZSI6ImFtZDY0In0sImRldmljZSI6e30sImVuZ2luZSI6eyJuYW1lIjoiQmxpbmsiLCJ2ZXJzaW9uIjoiMTM1LjAuMC4wIn0sIm9zIjp7Im5hbWUiOiJXaW5kb3dzIiwidmVyc2lvbiI6IjEwIn19LCJjbGllbnQiOnsicmlkIjoiODJjNzM5YzEtN2FlYy00ZTI0LThkMjgtYWZkOGMwMzJjZmUwIiwic2lkIjoiMjAzZTc4ZGEtZTM1NC00MmVlLTg2YzAtOWZlMDExNDVkMDc4IiwiaXAiOiIxMjUuMTYwLjIzNy4zMiIsInJlZiI6Imh0dHBzOi8vd3d3LnNvdW5kb24uZ2xvYmFsLyIsImhvc3QiOiJzbmRvLmZmbS50byIsImxhbmciOiJlbiIsImlwQ291bnRyeSI6IklEIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IklEIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiJjYmJhODliMS0yYmMwLTRkYmEtYWIxMi0xZWViZTczZGJhMDYiLCJpZCI6IjY1MzEwMDc0MmQwMDAwMGMwMDEwMTE4YSIsInBydiI6dHJ1ZSwiaXNQcmVSIjpmYWxzZSwidHpvIjpudWxsLCJjaCI6bnVsbCwiYW4iOm51bGwsImRlc3RVcmwiOiJodHRwczovL211c2ljLmFtYXpvbi5jb20vYWxidW1zL0IwQ0xERko3VzE_cmVmPWRtX2ZmX2FtYXpvbm11c2ljLjNwJnRhZz1mZWF0dXJlZm0tMjAiLCJzcnZjIjoiYW1hem9uIiwicHJvZHVjdCI6InNtYXJ0bGluayIsInNob3J0SWQiOiJwZDhlN3JxIiwiaXNBdXRob3JpemF0aW9uUmVxdWlyZWQiOmZhbHNlLCJvd25lciI6IjYyNThmZTE4MjcwMDAwMGEwMDY4MzM3MiIsInRlbmFudCI6IjYyNThmYzhkNzhmNGYwNDhkNjA1ZWE0MSIsImFyIjoiNjUzMTAwNzIyOTAwMDBjZDU3ZjU1YzIwIiwiaXNTaG9ydExpbmsiOmZhbHNlLCJuYXRpdmUiOmZhbHNlfQ', '_blank')">Amazon Music</button>
+                                </div>
+                                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+                                    <button style="background: #A238FF; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onclick="window.open('https://api.ffm.to/sl/e/c/pd8e7rq?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzUuMC4wLjAgU2FmYXJpLzUzNy4zNiBPUFIvMTIwLjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiT3BlcmEiLCJ2ZXJzaW9uIjoiMTIwLjAuMC4wIiwibWFqb3IiOiIxMjAifSwiY3B1Ijp7ImFyY2hpdGVjdHVyZSI6ImFtZDY0In0sImRldmljZSI6e30sImVuZ2luZSI6eyJuYW1lIjoiQmxpbmsiLCJ2ZXJzaW9uIjoiMTM1LjAuMC4wIn0sIm9zIjp7Im5hbWUiOiJXaW5kb3dzIiwidmVyc2lvbiI6IjEwIn19LCJjbGllbnQiOnsicmlkIjoiODJjNzM5YzEtN2FlYy00ZTI0LThkMjgtYWZkOGMwMzJjZmUwIiwic2lkIjoiMjAzZTc4ZGEtZTM1NC00MmVlLTg2YzAtOWZlMDExNDVkMDc4IiwiaXAiOiIxMjUuMTYwLjIzNy4zMiIsInJlZiI6Imh0dHBzOi8vd3d3LnNvdW5kb24uZ2xvYmFsLyIsImhvc3QiOiJzbmRvLmZmbS50byIsImxhbmciOiJlbiIsImlwQ291bnRyeSI6IklEIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IklEIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiJjYmJhODliMS0yYmMwLTRkYmEtYWIxMi0xZWViZTczZGJhMDYiLCJpZCI6IjY1MzEwMDc0MmQwMDAwMGMwMDEwMTE4YSIsInBydiI6dHJ1ZSwiaXNQcmVSIjpmYWxzZSwidHpvIjpudWxsLCJjaCI6bnVsbCwiYW4iOm51bGwsImRlc3RVcmwiOiJodHRwczovL3d3dy5kZWV6ZXIuY29tL2FsYnVtLzUwMjE5MTc1MSIsInNydmMiOiJkZWV6ZXIiLCJwcm9kdWN0Ijoic21hcnRsaW5rIiwic2hvcnRJZCI6InBkOGU3cnEiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6ZmFsc2UsIm93bmVyIjoiNjI1OGZlMTgyNzAwMDAwYTAwNjgzMzcyIiwidGVuYW50IjoiNjI1OGZjOGQ3OGY0ZjA0OGQ2MDVlYTQxIiwiYXIiOiI2NTMxMDA3MjI5MDAwMGNkNTdmNTVjMjAiLCJpc1Nob3J0TGluayI6ZmFsc2UsIm5hdGl2ZSI6ZmFsc2V9', '_blank')">Deezer</button>
+                                    <button style="background: #000000; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onclick="window.open('https://api.ffm.to/sl/e/c/pd8e7rq?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzUuMC4wLjAgU2FmYXJpLzUzNy4zNiBPUFIvMTIwLjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiT3BlcmEiLCJ2ZXJzaW9uIjoiMTIwLjAuMC4wIiwibWFqb3IiOiIxMjAifSwiY3B1Ijp7ImFyY2hpdGVjdHVyZSI6ImFtZDY0In0sImRldmljZSI6e30sImVuZ2luZSI6eyJuYW1lIjoiQmxpbmsiLCJ2ZXJzaW9uIjoiMTM1LjAuMC4wIn0sIm9zIjp7Im5hbWUiOiJXaW5kb3dzIiwidmVyc2lvbiI6IjEwIn19LCJjbGllbnQiOnsicmlkIjoiODJjNzM5YzEtN2FlYy00ZTI0LThkMjgtYWZkOGMwMzJjZmUwIiwic2lkIjoiMjAzZTc4ZGEtZTM1NC00MmVlLTg2YzAtOWZlMDExNDVkMDc4IiwiaXAiOiIxMjUuMTYwLjIzNy4zMiIsInJlZiI6Imh0dHBzOi8vd3d3LnNvdW5kb24uZ2xvYmFsLyIsImhvc3QiOiJzbmRvLmZmbS50byIsImxhbmciOiJlbiIsImlwQ291bnRyeSI6IklEIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IklEIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiJjYmJhODliMS0yYmMwLTRkYmEtYWIxMi0xZWViZTczZGJhMDYiLCJpZCI6IjY1MzEwMDc0MmQwMDAwMGMwMDEwMTE4YSIsInBydiI6dHJ1ZSwiaXNQcmVSIjpmYWxzZSwidHpvIjpudWxsLCJjaCI6bnVsbCwiYW4iOm51bGwsImRlc3RVcmwiOiJodHRwOi8vd3d3LnRpZGFsLmNvbS9hbGJ1bS8zMjI3MTM2ODkiLCJzcnZjIjoidGlkYWwiLCJwcm9kdWN0Ijoic21hcnRsaW5rIiwic2hvcnRJZCI6InBkOGU3cnEiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6ZmFsc2UsIm93bmVyIjoiNjI1OGZlMTgyNzAwMDAwYTAwNjgzMzcyIiwidGVuYW50IjoiNjI1OGZjOGQ3OGY0ZjA0OGQ2MDVlYTQxIiwiYXIiOiI2NTMxMDA3MjI5MDAwMGNkNTdmNTVjMjAiLCJpc1Nob3J0TGluayI6ZmFsc2UsIm5hdGl2ZSI6ZmFsc2V9', '_blank')">Tidal</button>
+                                    <button style="background: #FA57C1; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onclick="window.open('https://api.ffm.to/sl/e/c/pd8e7rq?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzUuMC4wLjAgU2FmYXJpLzUzNy4zNiBPUFIvMTIwLjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiT3BlcmEiLCJ2ZXJzaW9uIjoiMTIwLjAuMC4wIiwibWFqb3IiOiIxMjAifSwiY3B1Ijp7ImFyY2hpdGVjdHVyZSI6ImFtZDY0In0sImRldmljZSI6e30sImVuZ2luZSI6eyJuYW1lIjoiQmxpbmsiLCJ2ZXJzaW9uIjoiMTM1LjAuMC4wIn0sIm9zIjp7Im5hbWUiOiJXaW5kb3dzIiwidmVyc2lvbiI6IjEwIn19LCJjbGllbnQiOnsicmlkIjoiODJjNzM5YzEtN2FlYy00ZTI0LThkMjgtYWZkOGMwMzJjZmUwIiwic2lkIjoiMjAzZTc4ZGEtZTM1NC00MmVlLTg2YzAtOWZlMDExNDVkMDc4IiwiaXAiOiIxMjUuMTYwLjIzNy4zMiIsInJlZiI6Imh0dHBzOi8vd3d3LnNvdW5kb24uZ2xvYmFsLyIsImhvc3QiOiJzbmRvLmZmbS50byIsImxhbmciOiJlbiIsImlwQ291bnRyeSI6IklEIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IklEIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiJjYmJhODliMS0yYmMwLTRkYmEtYWIxMi0xZWViZTczZGJhMDYiLCJpZCI6IjY1MzEwMDc0MmQwMDAwMGMwMDEwMTE4YSIsInBydiI6dHJ1ZSwiaXNQcmVSIjpmYWxzZSwidHpvIjpudWxsLCJjaCI6bnVsbCwiYW4iOm51bGwsImRlc3RVcmwiOiJodHRwczovL2dlby5pdHVuZXMuYXBwbGUuY29tL2lkL2FsYnVtL2ZhaXRoLXdpdGgtdGFyZ2V0LXNpbmdsZS8xNzMwNDkxMTMzP2FwcD1pdHVuZXMmbHM9MSZjdD1GRk1fMjhiNTY3ZWY5MzQ1ZDJkNTY1MTg1Y2RlMmVkZDQ5MzYmYXQ9MTAwMWx3UXkiLCJzcnZjIjoiaXR1bmVzIiwicHJvZHVjdCI6InNtYXJ0bGluayIsInNob3J0SWQiOiJwZDhlN3JxIiwiaXNBdXRob3JpemF0aW9uUmVxdWlyZWQiOmZhbHNlLCJvd25lciI6IjYyNThmZTE4MjcwMDAwMGEwMDY4MzM3MiIsInRlbmFudCI6IjYyNThmYzhkNzhmNGYwNDhkNjA1ZWE0MSIsImFyIjoiNjUzMTAwNzIyOTAwMDBjZDU3ZjU1YzIwIiwiaXNTaG9ydExpbmsiOmZhbHNlLCJuYXRpdmUiOmZhbHNlfQ', '_blank')">iTunes</button>
+                                    <button style="background: #005483; color: white; border: none; border-radius: 20px; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onclick="window.open('https://api.ffm.to/sl/e/c/pd8e7rq?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzUuMC4wLjAgU2FmYXJpLzUzNy4zNiBPUFIvMTIwLjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiT3BlcmEiLCJ2ZXJzaW9uIjoiMTIwLjAuMC4wIiwibWFqb3IiOiIxMjAifSwiY3B1Ijp7ImFyY2hpdGVjdHVyZSI6ImFtZDY0In0sImRldmljZSI6e30sImVuZ2luZSI6eyJuYW1lIjoiQmxpbmsiLCJ2ZXJzaW9uIjoiMTM1LjAuMC4wIn0sIm9zIjp7Im5hbWUiOiJXaW5kb3dzIiwidmVyc2lvbiI6IjEwIn19LCJjbGllbnQiOnsicmlkIjoiODJjNzM5YzEtN2FlYy00ZTI0LThkMjgtYWZkOGMwMzJjZmUwIiwic2lkIjoiMjAzZTc4ZGEtZTM1NC00MmVlLTg2YzAtOWZlMDExNDVkMDc4IiwiaXAiOiIxMjUuMTYwLjIzNy4zMiIsInJlZiI6Imh0dHBzOi8vd3d3LnNvdW5kb24uZ2xvYmFsLyIsImhvc3QiOiJzbmRvLmZmbS50byIsImxhbmciOiJlbiIsImlwQ291bnRyeSI6IklEIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IklEIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiJjYmJhODliMS0yYmMwLTRkYmEtYWIxMi0xZWViZTczZGJhMDYiLCJpZCI6IjY1MzEwMDc0MmQwMDAwMGMwMDEwMTE4YSIsInBydiI6dHJ1ZSwiaXNQcmVSIjpmYWxzZSwidHpvIjpudWxsLCJjaCI6bnVsbCwiYW4iOm51bGwsImRlc3RVcmwiOiJodHRwczovL3BhbmRvcmEuYXBwLmxpbmsvPyRkZXNrdG9wX3VybD1odHRwcyUzQSUyRiUyRnd3dy5wYW5kb3JhLmNvbSUyRmFydGlzdCUyRmFjZWxieXRlJTJGZmFpdGgtd2l0aC10YXJnZXQlMkZBTHh4a1Z6dmZaY3d2NW0mJGlvc19kZWVwbGlua19wYXRoPXBhbmRvcmF2NCUzQSUyRiUyRmJhY2tzdGFnZSUyRmFsYnVtJTNGdG9rZW4lM0RBTCUzQTI4Mjk1NjgzJiRhbmRyb2lkX2RlZXBsaW5rX3BhdGg9cGFuZG9yYXY0JTNBJTJGJTJGYmFja3N0YWdlJTJGYWxidW0lM0Z0b2tlbiUzREFMJTNBMjgyOTU2ODMmfmNoYW5uZWw9UGFydG5lciUyMENhdGFsb2clMjBTZWFyY2glMjBBUEkiLCJzcnZjIjoicGFuZG9yYSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoicGQ4ZTdycSIsImlzQXV0aG9yaXphdGlvblJlcXVpcmVkIjpmYWxzZSwib3duZXIiOiI2MjU4ZmUxODI3MDAwMDBhMDA2ODMzNzIiLCJ0ZW5hbnQiOiI2MjU4ZmM4ZDc4ZjRmMDQ4ZDYwNWVhNDEiLCJhciI6IjY1MzEwMDcyMjkwMDAwY2Q1N2Y1NWMyMCIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0', '_blank')">Pandora</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Coming Soon Section -->
                     <div style="margin-bottom: 40px;" class="scroll-animate">
-                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden;">
-                            <div style="padding: 40px 30px;">
-                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--secondary-gradient); border-radius: 15px;"></div>
-                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Full-Stack Development</h5>
-                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Expert in modern web technologies, cloud architecture, and scalable application development from frontend to backend.</p><button style="background: linear-gradient(135deg, #FFF700, #FFD700); color: black; border: none; border-radius: 25px; padding: 12px 24px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">View Projects →</button>
+                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden; border-radius: 20px;">
+                            <div style="position: relative; width: 100%; height: 315px; background: linear-gradient(135deg, #1a1a1a, #2d2d2d); border-radius: 20px 20px 0 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                <div style="text-align: center; padding: 40px;">
+                                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, rgba(255, 247, 0, 0.2), rgba(255, 215, 0, 0.2)); border: 2px solid rgba(255, 247, 0, 0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                                        <svg width="60" height="60" fill="rgba(255, 247, 0, 0.7)" viewBox="0 0 24 24">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                        </svg>
+                                    </div>
+                                    <h4 style="color: rgba(255, 255, 255, 0.8); font-family: 'Product Sans', sans-serif; margin-bottom: 10px;">More Compositions</h4>
+                                    <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">Coming Soon</p>
+                                </div>
+                                <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(255, 247, 0, 0.3); color: rgba(255, 247, 0, 0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">In Development</div>
+                            </div>
+                            <div style="padding: 30px;">
+                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif; opacity: 0.8;">Additional Compositions</h5>
+                                <p class="text-light card-text mb-4" style="opacity: 0.6;">More original soundtracks and compositions are currently in development. Stay tuned for upcoming releases featuring various genres and styles.</p>
+                                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                                    <span style="background: rgba(255, 247, 0, 0.1); color: rgba(255, 247, 0, 0.6); padding: 4px 8px; border-radius: 12px; font-size: 0.8rem;">Ambient</span>
+                                    <span style="background: rgba(255, 247, 0, 0.1); color: rgba(255, 247, 0, 0.6); padding: 4px 8px; border-radius: 12px; font-size: 0.8rem;">Cinematic</span>
+                                    <span style="background: rgba(255, 247, 0, 0.1); color: rgba(255, 247, 0, 0.6); padding: 4px 8px; border-radius: 12px; font-size: 0.8rem;">Electronic</span>
+                                </div>
+                                <button style="background: rgba(255, 247, 0, 0.2); color: rgba(255, 247, 0, 0.8); border: 1px solid rgba(255, 247, 0, 0.3); border-radius: 25px; padding: 12px 24px; font-weight: 600; cursor: not-allowed; transition: all 0.3s ease;" disabled>Coming Soon</button>
                             </div>
                         </div>
                     </div>
-                    <div style="margin-bottom: 40px;" class="scroll-animate">
-                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden;">
-                            <div style="padding: 40px 30px;">
-                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--primary-gradient); border-radius: 15px;"></div>
-                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">Data Science</h5>
-                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Advanced analytics, predictive modeling, and data visualization to extract meaningful insights from complex datasets.</p><button style="background: linear-gradient(135deg, #FFF700, #FFD700); color: black; border: none; border-radius: 25px; padding: 12px 24px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">See Analytics →</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 40px;" class="scroll-animate">
-                        <div class="card glass-dark" style="border: 1px solid rgba(255, 247, 0, 0.3); position: relative; overflow: hidden;">
-                            <div style="padding: 40px 30px;">
-                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute; background: var(--accent-gradient); border-radius: 15px;"></div>
-                                <h5 class="fw-bold card-title text-light" style="font-family: 'Product Sans', sans-serif;">DevOps & Cloud</h5>
-                                <p class="text-light card-text mb-4" style="opacity: 0.8;">Expertise in containerization, CI/CD pipelines, cloud infrastructure, and automated deployment strategies.</p><button style="background: linear-gradient(135deg, #FFF700, #FFD700); color: black; border: none; border-radius: 25px; padding: 12px 24px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Learn More →</button>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -1427,7 +1711,7 @@ permalink: /music-composer
                     <!-- Logo Section -->
                     <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
                         <div class="footer-brand">
-                            <img src="images/logo1.png" alt="Acelbyte" class="footer-brand-logo">
+                            <img src="images/logos/logo1.png" alt="Acelbyte" class="footer-brand-logo">
                             <h4 class="footer-brand-text">Acelbyte</h4>
                         </div>
                     </div>
@@ -1495,8 +1779,8 @@ permalink: /music-composer
                     <div style="text-align: center;">
                         <p class="footer-copyright mb-0">
                             © 2020 - 2025 Acelbyte. All rights reserved. Powered by 
-                            <img src="images/logo2.png" alt="XESC" class="footer-logo"> XESC and 
-                            <img src="images/logo3.png" alt="SARAH" class="footer-logo"> SARAH AI
+                            <img src="images/logos/logo2.png" alt="XESC" class="footer-logo"> XESC and 
+                            <img src="images/logos/logo3.png" alt="SARAH" class="footer-logo"> SARAH AI
                         </p>
                     </div>
                 </div>
