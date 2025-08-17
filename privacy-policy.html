@@ -1540,6 +1540,134 @@ permalink: /privacy-policy
                         entry.target.classList.remove('visible');
                     }
                 });
+
+        // Comprehensive Download Protection and Developer Tools Prevention
+        document.addEventListener('DOMContentLoaded', function() {
+            // Disable right-click context menu
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Disable drag and drop
+            document.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Disable text selection
+            document.addEventListener('selectstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Disable keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                // Disable F12 (Developer Tools)
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+Shift+I (Developer Tools)
+                if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+Shift+J (Console)
+                if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+U (View Source)
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+S (Save Page)
+                if (e.ctrlKey && e.key === 's') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+A (Select All)
+                if (e.ctrlKey && e.key === 'a') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Ctrl+P (Print)
+                if (e.ctrlKey && e.key === 'p') {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Disable Print Screen
+                if (e.key === 'PrintScreen') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // Developer Tools Detection
+            let devtools = {
+                open: false,
+                orientation: null
+            };
+            
+            const threshold = 160;
+            
+            setInterval(function() {
+                if (window.outerHeight - window.innerHeight > threshold || 
+                    window.outerWidth - window.innerWidth > threshold) {
+                    if (!devtools.open) {
+                        devtools.open = true;
+                        // Replace page content when developer tools are detected
+                        document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #000; color: #fff; font-family: Arial, sans-serif; font-size: 24px;">Access Denied - Developer Tools Detected</div>';
+                    }
+                } else {
+                    devtools.open = false;
+                }
+            }, 500);
+
+            // Disable image dragging
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('dragstart', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+                img.style.userSelect = 'none';
+                img.style.webkitUserSelect = 'none';
+                img.style.mozUserSelect = 'none';
+                img.style.msUserSelect = 'none';
+            });
+
+            // Additional protection for CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                * {
+                    -webkit-user-select: none !important;
+                    -moz-user-select: none !important;
+                    -ms-user-select: none !important;
+                    user-select: none !important;
+                    -webkit-touch-callout: none !important;
+                    -webkit-tap-highlight-color: transparent !important;
+                }
+                img {
+                    pointer-events: none !important;
+                    -webkit-user-drag: none !important;
+                    -khtml-user-drag: none !important;
+                    -moz-user-drag: none !important;
+                    -o-user-drag: none !important;
+                    user-drag: none !important;
+                }
+            `;
+            document.head.appendChild(style);
+        });
             }, {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
