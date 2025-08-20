@@ -9,13 +9,11 @@ permalink: /xoeris
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Xoeris</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap">
     <style>
-        /* Product Sans Font Face Declarations */
+        /* Bebas Neue Font Face Declarations */
         @font-face {
-            font-family: 'Product Sans';
-            src: url('fonts/product_sans_regular.ttf') format('truetype');
+            font-family: 'Bebas Neue';
+            src: url('fonts/bebas_neue_regular.ttf') format('truetype');
             font-weight: 400;
             font-style: normal;
         }
@@ -355,26 +353,7 @@ permalink: /xoeris
             }
         }
         
-        @font-face {
-            font-family: 'Product Sans';
-            src: url('fonts/product_sans_bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: 'Product Sans';
-            src: url('fonts/product_sans_italic.ttf') format('truetype');
-            font-weight: 400;
-            font-style: italic;
-        }
-        
-        @font-face {
-            font-family: 'Product Sans';
-            src: url('fonts/product_sans_bold_italic.ttf') format('truetype');
-            font-weight: 700;
-            font-style: italic;
-        }
+
 
         :root {
             --primary-gradient: #FFF700;
@@ -540,7 +519,7 @@ permalink: /xoeris
         }
 
         /* Skills section padding */
-        #skills .container {
+        #about .container {
             padding: 3rem 2rem !important;
             margin-top: 3rem;
             margin-bottom: 3rem;
@@ -552,7 +531,7 @@ permalink: /xoeris
         }
 
         /* Skills section card specific padding */
-        #skills .card-body {
+        #about .card-body {
             padding: 2rem 1.5rem !important;
             width: 100% !important;
             box-sizing: border-box !important;
@@ -579,7 +558,7 @@ permalink: /xoeris
         }
         
         /* Make card-body fill available space */
-        #skills .card-body {
+        #about .card-body {
             padding: 0.625rem 1.5rem !important;
             width: 100% !important;
             box-sizing: border-box !important;
@@ -589,7 +568,7 @@ permalink: /xoeris
             flex-direction: column !important;
         }
 
-        #skills .col {
+        #about .col {
             padding-left: 1rem;
             padding-right: 1rem;
             margin-bottom: 2rem;
@@ -598,12 +577,12 @@ permalink: /xoeris
         }
         
         /* Add space between paragraph and button in skills cards */
-        #skills .btn {
+        #about .btn {
             margin-top: 1.25rem !important;
         }
 
         /* Skills section row spacing */
-        #skills .row {
+        #about .row {
             margin-left: -1rem;
             margin-right: -1rem;
         }
@@ -615,7 +594,7 @@ permalink: /xoeris
 
         /* Global font family override */
         * {
-            font-family: 'Product Sans', sans-serif !important;
+            font-family: 'Bebas Neue', sans-serif !important;
         }
 
         /* Futuristic animations */
@@ -1340,7 +1319,7 @@ permalink: /xoeris
                 padding-bottom: 2rem;
             }
             
-            #skills .container {
+            #about .container {
                 padding: 2rem 1rem !important;
                 margin-top: 2rem;
                 margin-bottom: 2rem;
@@ -1350,13 +1329,13 @@ permalink: /xoeris
                  margin-bottom: 1.5rem;
              }
              
-             #skills .card-body {
+             #about .card-body {
                  padding: 1.5rem 1rem !important;
                  width: 100% !important;
                  box-sizing: border-box !important;
              }
              
-             #skills .col {
+             #about .col {
                  padding-left: 0.5rem;
                  padding-right: 0.5rem;
                  margin-bottom: 1.5rem;
@@ -1408,19 +1387,19 @@ permalink: /xoeris
                 padding: 0.75rem 1.5rem !important;
             }
             
-            #skills .container {
+            #about .container {
                  padding: 1.5rem 0.75rem !important;
                  margin-top: 1.5rem;
                  margin-bottom: 1.5rem;
              }
              
-             #skills .card-body {
+             #about .card-body {
                  padding: 1rem 0.75rem !important;
                  width: 100% !important;
                  box-sizing: border-box !important;
              }
              
-             #skills .col {
+             #about .col {
                  padding-left: 0.25rem;
                  padding-right: 0.25rem;
                  margin-bottom: 1rem;
@@ -1435,7 +1414,7 @@ permalink: /xoeris
     <nav class="custom-navbar" id="mainNav">
         <div class="nav-container">
             <a href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="text-decoration: none;">
-                <img class="nav-logo" width="50" height="50" style="width: 50px;height: 50px;padding-right: 0px;margin-right: 0px;border-radius: 50%; object-fit: cover; background: transparent !important; cursor: pointer;" src="images/logos/logo1.png">
+                <img class="nav-logo" width="50" height="50" style="width: 50px;height: 50px;padding-right: 0px;margin-right: 0px;border-radius: 50%; object-fit: cover; background: transparent !important; cursor: pointer;" src="images/logos/logo4.png">
             </a>
             <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
                 <span class="hamburger-line"></span>
@@ -1446,7 +1425,7 @@ permalink: /xoeris
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link active" href="https://acelbyte.com/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://acelbyte.com/coming-soon">Projects</a></li>
                 </ul>
             </div>
@@ -1513,7 +1492,7 @@ permalink: /xoeris
             <div style="text-align: center; margin-bottom: 40px; padding: 0 20px;">
                 <div class="fade-in-up">
                     <p style="color: var(--glow-color); font-family: 'Product Sans', sans-serif; font-weight: bold; margin-bottom: 10px;">Introduction</p>
-                    <h3 style="font-family: 'Product Sans', sans-serif; font-weight: bold; color: white;">Skills</h3>
+                    <h3 style="font-family: 'Product Sans', sans-serif; font-weight: bold; color: white;">Our Skills</h3>
                 </div>
             </div>
             
