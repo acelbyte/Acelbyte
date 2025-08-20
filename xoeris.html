@@ -489,12 +489,8 @@ permalink: /xoeris
         }
 
         .main-content {
-            opacity: 0;
-            transition: opacity 1s ease-in;
-        }
-
-        .main-content.show {
             opacity: 1;
+            transition: opacity 1s ease-in;
         }
 
         body {
@@ -1434,23 +1430,6 @@ permalink: /xoeris
 </head>
 
 <body>
-    <!-- Video Intro Overlay -->
-    <div id="videoIntro" class="video-intro-overlay">
-        <div class="futuristic-bg">
-            <div class="grid-overlay"></div>
-            <div class="particles-intro"></div>
-        </div>
-        <div class="video-container">
-            <video id="introVideo" autoplay muted playsinline>
-                <source src="videos/splash.mov" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="intro-progress">
-            <div class="progress-bar"></div>
-        </div>
-    </div>
-
     <!-- Main Content -->
     <div id="mainContent" class="main-content">
     <nav class="custom-navbar" id="mainNav">
@@ -1810,73 +1789,7 @@ permalink: /xoeris
             lastMouseMove = now;
         });
 
-        // Video Intro Animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const videoIntro = document.getElementById('videoIntro');
-            const introVideo = document.getElementById('introVideo');
-            const mainContent = document.getElementById('mainContent');
-            const progressBar = document.querySelector('.progress-bar');
-            
-            let videoDuration = 0;
-            let progressInterval;
-            
-            // Handle video metadata loaded
-            introVideo.addEventListener('loadedmetadata', function() {
-                videoDuration = introVideo.duration;
-                startProgressBar();
-            });
-            
-            // Handle video ended
-            introVideo.addEventListener('ended', function() {
-                endIntro();
-            });
-            
-            // Handle video error (fallback)
-            introVideo.addEventListener('error', function() {
-                console.log('Video failed to load, skipping intro');
-                setTimeout(endIntro, 1000);
-            });
-            
-            // Start progress bar animation
-            function startProgressBar() {
-                let progress = 0;
-                progressInterval = setInterval(() => {
-                    progress += (100 / (videoDuration * 10));
-                    if (progress >= 100) {
-                        progress = 100;
-                        clearInterval(progressInterval);
-                    }
-                    progressBar.style.width = progress + '%';
-                }, 100);
-            }
-            
-            // End intro and show main content
-            function endIntro() {
-                clearInterval(progressInterval);
-                progressBar.style.width = '100%';
-                
-                setTimeout(() => {
-                    videoIntro.classList.add('fade-out');
-                    mainContent.classList.add('show');
-                    
-                    setTimeout(() => {
-                        videoIntro.style.display = 'none';
-                    }, 1000);
-                }, 500);
-            }
-            
-            // Skip intro on click
-            videoIntro.addEventListener('click', function() {
-                endIntro();
-            });
-            
-            // Auto-skip after 10 seconds if video doesn't load
-            setTimeout(() => {
-                if (!videoIntro.classList.contains('fade-out')) {
-                    endIntro();
-                }
-            }, 10000);
-        });
+
 
         // Custom Hamburger Menu Functionality
         document.addEventListener('DOMContentLoaded', function() {
